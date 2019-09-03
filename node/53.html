@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head>
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="../sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="canonical" href="../bash-cheat-sheet.html" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortlink" href="53.html" />
+<title>BASH Cheat Sheet | ScORCH</title>
+<style type="text/css" media="all">
+@import url("../modules/system/system.base.css%3F.css");
+@import url("../modules/system/system.menus.css%3F.css");
+@import url("../modules/system/system.messages.css%3F.css");
+@import url("../modules/system/system.theme.css%3F.css");
+</style>
+<style type="text/css" media="all">
+@import url("../modules/comment/comment.css%3F.css");
+@import url("../modules/field/theme/field.css%3F.css");
+@import url("../modules/node/node.css%3F.css");
+@import url("../modules/search/search.css%3F.css");
+@import url("../modules/user/user.css%3F.css");
+@import url("../sites/all/modules/ckeditor/css/ckeditor.css%3F.css");
+</style>
+<style type="text/css" media="all">
+@import url("../sites/all/themes/responsive_blog/css/color-schemes.css%3F.css");
+</style>
+<style type="text/css" media="all">
+@import url("../sites/all/themes/responsive_blog/style.css%3F.css");
+</style>
+<script type="text/javascript" src="../misc/jquery.js%3Fv=1.4.4"></script>
+<script type="text/javascript" src="../misc/jquery-extend-3.4.0.js%3Fv=1.4.4"></script>
+<script type="text/javascript" src="../misc/jquery.once.js%3Fv=1.2"></script>
+<script type="text/javascript" src="../misc/drupal.js%3F"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/main-menu.js%3F"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/pngfix.min.js%3F"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"bqGp96gOhHSdRIAU_gBvzha8vnB_35T01XB054tDh44","js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/themes\/responsive_blog\/css\/color-schemes.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1}},"statistics":{"data":{"nid":"53"},"url":"\/modules\/statistics\/statistics.php"}});
+//--><!]]>
+</script>
+<!--[if lt IE 9]><script src="/sites/all/themes/responsive_blog/js/html5.js"></script><![endif]-->
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-53 node-type-page dark">
+    <div id="wrapper">
+  <header id="header" class="clearfix">
+                                <div class="social-profile">
+        <ul>
+                    <li class="twitter">
+            <a target="_blank" title="ScORCH in Twitter" href="https://twitter.com/webmarcitltd">ScORCH Twitter </a>
+          </li>                              <li class="rss">
+            <a target="_blank" title="ScORCH in RSS" href="../rss.xml">ScORCH RSS </a>
+          </li>
+        </ul>
+      </div>
+        <nav id="navigation" role="navigation">
+      <div id="main-menu">
+        <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
+<li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
+<li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
+<li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)">Ansible Cheat Sheet</a></li>
+<li class="leaf active-trail"><a href="../bash-cheat-sheet.html" class="active-trail active">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH Login options</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">BASH bubblesort demo</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+</ul></li>
+<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
+</ul>      </div>
+    </nav>
+  </header>
+
+  <div id="preface-area" class="clearfix">
+    
+      </div>
+
+  <div id="main" class="clearfix">
+    <div id="primary">
+      <section id="content" role="main">
+        
+                                <div id="content-wrap">
+                    <h1 class="page-title">BASH Cheat Sheet</h1>                                                  <div class="region region-content">
+  <div id="block-system-main" class="block block-system">
+
+      
+  <div class="content">
+                        <span property="dc:title" content="BASH Cheat Sheet" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>  
+      
+    
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h3>Almighty bash is our saviour</h3>
+<ul><li>Keep it idempotent</li>
+<li>Clear is better then clever</li>
+<li>Keep it strict set -euo pipefail</li>
+<li>"Simplicity is a prerequisite for reliability" - Edsger W. Dijkstra</li>
+</ul><p> </p>
+<h3>Example</h3>
+<pre>
+#!/usr/bin/env bash
+
+NAME="John"
+echo "Hello $NAME!"
+</pre><h3>Variables</h3>
+<pre>
+NAME="John"
+echo $NAME
+echo "$NAME"
+echo "${NAME}!"
+</pre><h3>String quotes</h3>
+<pre>
+NAME="John"
+echo "Hi $NAME"  #=&gt; Hi John
+echo 'Hi $NAME'  #=&gt; Hi $NAME
+</pre><h3>Shell execution</h3>
+<pre>
+echo "I'm in $(pwd)"
+echo "I'm in `pwd`"
+# Same
+</pre><p>Conditional execution</p>
+<pre>
+git commit &amp;&amp; git push
+git commit || echo "Commit failed"
+</pre><h3>Functions</h3>
+<pre>
+get_name() {
+  echo "John"
+}
+
+echo "You are $(get_name)"
+</pre><h3>Conditionals</h3>
+<pre>
+if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+fi
+</pre><h3>Strict mode</h3>
+<pre>
+set -euo pipefail
+IFS=$'\n\t'
+</pre><h3>Brace expansion</h3>
+<pre>
+echo {A,B}.js
+</pre><table><tbody><tr><td>{A,B}</td>
+<td>Same as A B</td>
+</tr><tr><td>{A,B}.js</td>
+<td>Same as A.js B.js</td>
+</tr><tr><td>{1..5}</td>
+<td>Same as 1 2 3 4 5</td>
+</tr></tbody></table><h2>Parameter expansions</h2>
+<h2>Basics</h2>
+<pre>
+name="John"
+echo ${name}
+echo ${name/J/j}    #=&gt; "john" (substitution)
+echo ${name:0:2}    #=&gt; "Jo" (slicing)
+echo ${name::2}     #=&gt; "Jo" (slicing)
+echo ${name::-1}    #=&gt; "Joh" (slicing)
+echo ${name:(-1)}   #=&gt; "n" (slicing from right)
+echo ${name:(-2):1} #=&gt; "h" (slicing from right)
+echo ${food:-Cake}  #=&gt; $food or "Cake"
+</pre><pre>
+length=2
+echo ${name:0:length}  #=&gt; "Jo"
+
+</pre><pre>
+STR="/path/to/foo.cpp"
+echo ${STR%.cpp}    # /path/to/foo
+echo ${STR%.cpp}.o  # /path/to/foo.o
+
+echo ${STR##*.}     # cpp (extension)
+echo ${STR##*/}     # foo.cpp (basepath)
+
+echo ${STR#*/}      # path/to/foo.cpp
+echo ${STR##*/}     # foo.cpp
+
+echo ${STR/foo/bar} # /path/to/bar.cpp
+</pre><pre>
+STR="Hello world"
+echo ${STR:6:5}   # "world"
+echo ${STR:-5:5}  # "world"
+</pre><pre>
+SRC="/path/to/foo.cpp"
+BASE=${SRC##*/}   #=&gt; "foo.cpp" (basepath)
+DIR=${SRC%$BASE}  #=&gt; "/path/to/" (dirpath)
+</pre><h3>Substitution</h3>
+<table><tbody><tr><td>${FOO%suffix}</td>
+<td>Remove suffix</td>
+</tr><tr><td>${FOO#prefix}</td>
+<td>Remove prefix</td>
+</tr></tbody><tbody><tr><td>${FOO%%suffix}</td>
+<td>Remove long suffix</td>
+</tr><tr><td>${FOO##prefix}</td>
+<td>Remove long prefix</td>
+</tr></tbody><tbody><tr><td>${FOO/from/to}</td>
+<td>Replace first match</td>
+</tr><tr><td>${FOO//from/to}</td>
+<td>Replace all</td>
+</tr></tbody><tbody><tr><td>${FOO/%from/to}</td>
+<td>Replace suffix</td>
+</tr><tr><td>${FOO/#from/to}</td>
+<td>Replace prefix</td>
+</tr></tbody></table><h3>Comments</h3>
+<pre>
+# Single line comment
+</pre><pre>
+: '
+This is a
+multi line
+comment
+'
+</pre><h3>Substrings</h3>
+<table><tbody><tr><td>${FOO:0:3}</td>
+<td>Substring <em>(position, length)</em></td>
+</tr><tr><td>${FOO:-3:3}</td>
+<td>Substring from the right</td>
+</tr></tbody></table><h3>Length</h3>
+<table><tbody><tr><td>${#FOO}</td>
+<td>Length of $FOO</td>
+</tr></tbody></table><h3>Default values</h3>
+<table><tbody><tr><td>${FOO:-val}</td>
+<td>$FOO, or val if not set</td>
+</tr><tr><td>${FOO:=val}</td>
+<td>Set $FOO to val if not set</td>
+</tr><tr><td>${FOO:+val}</td>
+<td>val if $FOO is set</td>
+</tr><tr><td>${FOO:?message}</td>
+<td>Show error message and exit if $FOO is not set</td>
+</tr></tbody></table><p>The : is optional (eg, ${FOO=word} works)</p>
+<h2>Loops</h2>
+<h3>Basic for loop</h3>
+<pre>
+for i in /etc/rc.*; do
+  echo $i
+done
+</pre><h3>Ranges</h3>
+<pre>
+for i in {1..5}; do
+    echo "Welcome $i"
+done
+</pre><h4>With step size</h4>
+<pre>
+for i in {5..50..5}; do
+    echo "Welcome $i"
+done
+</pre><h3>Reading lines</h3>
+<pre>
+&lt; file.txt | while read line; do
+  echo $line
+done
+</pre><h3>Forever</h3>
+<pre>
+while true; do
+  ···
+done
+</pre><h2>Functions</h2>
+<h3>Defining functions</h3>
+<pre>
+myfunc() {
+    echo "hello $1"
+}
+</pre><pre>
+# Same as above (alternate syntax)
+function myfunc() {
+    echo "hello $1"
+}
+</pre><pre>
+myfunc "John"
+</pre><h3>Returning values</h3>
+<pre>
+myfunc() {
+    local myresult='some value'
+    echo $myresult
+}
+</pre><pre>
+result="$(myfunc)"
+</pre><h3>Raising errors</h3>
+<pre>
+myfunc() {
+  return 1
+}
+</pre><pre>
+if myfunc; then
+  echo "success"
+else
+  echo "failure"
+fi
+</pre><h3>Arguments</h3>
+<table><tbody><tr><td>$#</td>
+<td>Number of arguments</td>
+</tr><tr><td>$*</td>
+<td>All arguments</td>
+</tr><tr><td>$@</td>
+<td>All arguments, starting from first</td>
+</tr><tr><td>$1</td>
+<td>First argument</td>
+</tr></tbody></table><h2>Conditionals</h2>
+<h3>Conditions</h3>
+<p>Note that [[ is actually a command/program that returns either 0 (true) or 1 (false). Any program that obeys the same logic (like all base utils, such as grep(1) or ping(1)) can be used as condition, see examples.</p>
+<table><tbody><tr><td>[[ -z STRING ]]</td>
+<td>Empty string</td>
+</tr><tr><td>[[ -n STRING ]]</td>
+<td>Not empty string</td>
+</tr><tr><td>[[ STRING == STRING ]]</td>
+<td>Equal</td>
+</tr><tr><td>[[ STRING != STRING ]]</td>
+<td>Not Equal</td>
+</tr></tbody><tbody><tr><td>[[ NUM -eq NUM ]]</td>
+<td>Equal</td>
+</tr><tr><td>[[ NUM -ne NUM ]]</td>
+<td>Not equal</td>
+</tr><tr><td>[[ NUM -lt NUM ]]</td>
+<td>Less than</td>
+</tr><tr><td>[[ NUM -le NUM ]]</td>
+<td>Less than or equal</td>
+</tr><tr><td>[[ NUM -gt NUM ]]</td>
+<td>Greater than</td>
+</tr><tr><td>[[ NUM -ge NUM ]]</td>
+<td>Greater than or equal</td>
+</tr></tbody><tbody><tr><td>[[ STRING =~ STRING ]]</td>
+<td>Regexp</td>
+</tr></tbody><tbody><tr><td>(( NUM &lt; NUM ))</td>
+<td>Numeric conditions</td>
+</tr></tbody></table><table><tbody><tr><td>[[ -o noclobber ]]</td>
+<td>If OPTIONNAME is enabled</td>
+</tr></tbody><tbody><tr><td>[[ ! EXPR ]]</td>
+<td>Not</td>
+</tr><tr><td>[[ X ]] &amp;&amp; [[ Y ]]</td>
+<td>And</td>
+</tr><tr><td>[[ X ]] || [[ Y ]]</td>
+<td>Or</td>
+</tr></tbody></table><h3>File conditions</h3>
+<table><tbody><tr><td>[[ -e FILE ]]</td>
+<td>Exists</td>
+</tr><tr><td>[[ -r FILE ]]</td>
+<td>Readable</td>
+</tr><tr><td>[[ -h FILE ]]</td>
+<td>Symlink</td>
+</tr><tr><td>[[ -d FILE ]]</td>
+<td>Directory</td>
+</tr><tr><td>[[ -w FILE ]]</td>
+<td>Writable</td>
+</tr><tr><td>[[ -s FILE ]]</td>
+<td>Size is &gt; 0 bytes</td>
+</tr><tr><td>[[ -f FILE ]]</td>
+<td>File</td>
+</tr><tr><td>[[ -x FILE ]]</td>
+<td>Executable</td>
+</tr></tbody><tbody><tr><td>[[ FILE1 -nt FILE2 ]]</td>
+<td>1 is more recent than 2</td>
+</tr><tr><td>[[ FILE1 -ot FILE2 ]]</td>
+<td>2 is more recent than 1</td>
+</tr><tr><td>[[ FILE1 -ef FILE2 ]]</td>
+<td>Same files</td>
+</tr></tbody></table><h3>Example</h3>
+<pre>
+if ping -c 1 google.com; then
+  echo "It appears you have a working internet connection"
+fi
+</pre><pre>
+if grep -q 'foo' ~/.bash_history; then
+  echo "You appear to have typed 'foo' in the past"
+fi
+</pre><pre>
+# String
+if [[ -z "$string" ]]; then
+  echo "String is empty"
+elif [[ -n "$string" ]]; then
+  echo "String is not empty"
+fi
+</pre><pre>
+# Combinations
+if [[ X ]] &amp;&amp; [[ Y ]]; then
+  ...
+fi
+</pre><pre>
+# Equal
+if [[ "$A" == "$B" ]]
+</pre><pre>
+# Regex
+if [[ "A" =~ "." ]]
+</pre><pre>
+if (( $a &lt; $b )); then
+   echo "$a is smaller than $b"
+fi
+</pre><pre>
+if [[ -e "file.txt" ]]; then
+  echo "file exists"
+fi
+</pre><h2>Arrays</h2>
+<h3>Defining arrays</h3>
+<pre>
+Fruits=('Apple' 'Banana' 'Orange')
+</pre><pre>
+Fruits[0]="Apple"
+Fruits[1]="Banana"
+Fruits[2]="Orange"
+</pre><h3>Working with arrays</h3>
+<pre>
+echo ${Fruits[0]}           # Element #0
+echo ${Fruits[@]}           # All elements, space-separated
+echo ${#Fruits[@]}          # Number of elements
+echo ${#Fruits}             # String length of the 1st element
+echo ${#Fruits[3]}          # String length of the Nth element
+echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
+</pre><h3>Operations</h3>
+<pre>
+Fruits=("${Fruits[@]}" "Watermelon")    # Push
+Fruits+=('Watermelon')                  # Also Push
+Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
+unset Fruits[2]                         # Remove one item
+Fruits=("${Fruits[@]}")                 # Duplicate
+Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
+lines=(`cat "logfile"`)                 # Read from file
+</pre><h3>Iteration</h3>
+<pre>
+for i in "${arrayName[@]}"; do
+  echo $i
+done
+</pre><h2>Options</h2>
+<h3>Options</h3>
+<pre>
+set -o noclobber  # Avoid overlay files (echo "hi" &gt; foo)
+set -o errexit    # Used to exit upon error, avoiding cascading errors
+set -o pipefail   # Unveils hidden failures
+set -o nounset    # Exposes unset variables
+</pre><h3>Glob options</h3>
+<pre>
+set -o nullglob    # Non-matching globs are removed  ('*.foo' =&gt; '')
+set -o failglob    # Non-matching globs throw errors
+set -o nocaseglob  # Case insensitive globs
+set -o globdots    # Wildcards match dotfiles ("*.sh" =&gt; ".foo.sh")
+set -o globstar    # Allow ** for recursive matches ('lib/**/*.rb' =&gt; 'lib/a/b/c.rb')
+</pre><p>Set GLOBIGNORE as a colon-separated list of patterns to be removed from glob matches.</p>
+<h2>History</h2>
+<h3>Commands</h3>
+<table><tbody><tr><td>history</td>
+<td>Show history</td>
+</tr><tr><td>shopt -s histverify</td>
+<td>Don’t execute expanded result immediately</td>
+</tr></tbody></table><h3>Expansions</h3>
+<table><tbody><tr><td>!$</td>
+<td>Expand last parameter of most recent command</td>
+</tr><tr><td>!*</td>
+<td>Expand all parameters of most recent command</td>
+</tr><tr><td>!-n</td>
+<td>Expand nth most recent command</td>
+</tr><tr><td>!n</td>
+<td>Expand nth command in history</td>
+</tr><tr><td>!&lt;command&gt;</td>
+<td>Expand most recent invocation of command &lt;command&gt;</td>
+</tr></tbody></table><h3>Operations</h3>
+<table><tbody><tr><td>!!</td>
+<td>Execute last command again</td>
+</tr><tr><td>!!:s/&lt;FROM&gt;/&lt;TO&gt;/</td>
+<td>Replace first occurrence of &lt;FROM&gt; to &lt;TO&gt; in most recent command</td>
+</tr><tr><td>!!:gs/&lt;FROM&gt;/&lt;TO&gt;/</td>
+<td>Replace all occurrences of &lt;FROM&gt; to &lt;TO&gt; in most recent command</td>
+</tr><tr><td>!$:t</td>
+<td>Expand only basename from last parameter of most recent command</td>
+</tr><tr><td>!$:h</td>
+<td>Expand only directory from last parameter of most recent command</td>
+</tr></tbody></table><p>!! and !$ can be replaced with any valid expansion.</p>
+<h3>Slices</h3>
+<table><tbody><tr><td>!!:n</td>
+<td>Expand only nth token from most recent command (command is 0; first argument is 1)</td>
+</tr><tr><td>!^</td>
+<td>Expand first argument from most recent command</td>
+</tr><tr><td>!$</td>
+<td>Expand last token from most recent command</td>
+</tr><tr><td>!!:n-m</td>
+<td>Expand range of tokens from most recent command</td>
+</tr><tr><td>!!:n-$</td>
+<td>Expand nth token to last from most recent command</td>
+</tr></tbody></table><p>!! can be replaced with any valid expansion i.e. !cat, !-2, !42, etc.</p>
+<h2>Miscellaneous</h2>
+<h3>Numeric calculations</h3>
+<pre>
+$((a + 200))      # Add 200 to $a
+</pre><pre>
+$((RANDOM%=200))  # Random number 0..200
+</pre><h3>Subshells</h3>
+<pre>
+(cd somedir; echo "I'm now in $PWD")
+pwd # still in first directory
+</pre><h3>Redirection</h3>
+<pre>
+python hello.py &gt; output.txt   # stdout to (file)
+python hello.py &gt;&gt; output.txt  # stdout to (file), append
+python hello.py 2&gt; error.log   # stderr to (file)
+python hello.py 2&gt;&amp;1           # stderr to stdout
+python hello.py 2&gt;/dev/null    # stderr to (null)
+python hello.py &amp;&gt;/dev/null    # stdout and stderr to (null)
+</pre><pre>
+python hello.py &lt; foo.txt      # feed foo.txt to stdin for python
+</pre><h3>Inspecting commands</h3>
+<pre>
+command -V cd
+#=&gt; "cd is a function/alias/whatever"
+</pre><h3>Trap errors</h3>
+<pre>
+trap 'echo Error at about $LINENO' ERR
+</pre><p>or</p>
+<pre>
+traperr() {
+  echo "ERROR: ${BASH_SOURCE[1]} at about ${BASH_LINENO[0]}"
+}
+
+set -o errtrace
+trap traperr ERR
+</pre><h3>Case/switch</h3>
+<pre>
+case "$1" in
+  start | up)
+    vagrant up
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|ssh}"
+    ;;
+esac
+</pre><h3>Source relative</h3>
+<pre>
+source "${0%/*}/../share/foo.sh"
+</pre><h3>printf</h3>
+<pre>
+printf "Hello %s, I'm %s" Sven Olga
+#=&gt; "Hello Sven, I'm Olga
+</pre><h3>Directory of script</h3>
+<pre>
+DIR="${0%/*}"
+</pre><h3>Getting options</h3>
+<pre>
+while [[ "$1" =~ ^- &amp;&amp; ! "$1" == "--" ]]; do case $1 in
+  -V | --version )
+    echo $version
+    exit
+    ;;
+  -s | --string )
+    shift; string=$1
+    ;;
+  -f | --flag )
+    flag=1
+    ;;
+esac; shift; done
+if [[ "$1" == '--' ]]; then shift; fi
+</pre><h3>Heredoc</h3>
+<pre>
+cat &lt;&lt;END
+hello world
+END
+</pre><h3>Reading input</h3>
+<pre>
+echo -n "Proceed? [y/n]: "
+read ans
+echo $ans
+</pre><pre>
+read -n 1 ans    # Just one character
+</pre><h3>Special variables</h3>
+<table><tbody><tr><td>$?</td>
+<td>Exit status of last task</td>
+</tr><tr><td>$!</td>
+<td>PID of last background task</td>
+</tr><tr><td>$$</td>
+<td>PID of shell</td>
+</tr></tbody></table><h3>Go to previous directory</h3>
+<pre>
+pwd # /home/user/foo
+cd bar/
+pwd # /home/user/foo/bar
+cd -
+pwd # /home/user/foo
+</pre></div></div></div>  </div>
+
+      <footer>
+          </footer>
+  
+    </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+        </div>
+      </section> <!-- /#main -->
+    </div>
+
+          <aside id="sidebar" role="complementary">
+       <div class="region region-sidebar-first">
+  <div id="block-system-main-menu" class="block block-system block-menu">
+
+        <h2 >Main menu</h2>
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
+<li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
+<li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
+<li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)">Ansible Cheat Sheet</a></li>
+<li class="leaf active-trail"><a href="../bash-cheat-sheet.html" class="active-trail active">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH Login options</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">BASH bubblesort demo</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+</ul></li>
+<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
+</ul>  </div>
+  
+</div> <!-- /.block -->
+</div>
+ <!-- /.region -->
+      </aside> 
+      </div>
+
+  <footer id="footer-bottom">
+    <div id="footer-area" class="clearfix">
+            
+          </div>
+
+    <div id="bottom" class="clearfix">
+      <div class="copyright">Copyright &copy; 2019, <a href="../index.html">ScORCH</a></div>
+      <div class="credit">Theme by  <a href="http://www.devsaran.com" target="_blank">Devsaran</a></div>
+    </div>
+  </footer>
+
+</div>
+
+
+
+
+
+
+  <script type="text/javascript" src="../modules/statistics/statistics.js%3F"></script>
+</body>
+</html>
