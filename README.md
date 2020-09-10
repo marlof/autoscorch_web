@@ -23,7 +23,7 @@ Step 7: Merge request
 Step 8: Merge
 
 
-# Jenkins-NAS way
+# Drupal-NAS way
 mkdir -p /mnt/d/temp-websites/scorch
 cd /mnt/d/temp-websites/
 Works but "?" issue:
