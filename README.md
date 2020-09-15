@@ -25,19 +25,24 @@ Step 8: Merge
 
 
 # Drupal-NAS way
+
     mkdir -p /mnt/d/temp-websites/scorch
     cd /mnt/d/temp-websites/
     
 Works but there is a "?" issue:
+
     wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://autoscorch.com
 Trying:
+
     wget -q --mirror -p -e robots=off --base=./ -k -P ./ http://autoscorch.com
 
---mirror – download recursive.
---convert-links – convert all the links/CSS stylesheets to relative
---adjust-extension – Adds extensions to filenames (html or css)
---page-requisites – Download CSS style-sheets and images required to properly display the pages
---no-parent – When recursing do not ascend to the parent directory. It useful for restricting the download to only a portion of the site.
+Other options to consider
+    --mirror – download recursive
+    --convert-links – convert all the links/CSS stylesheets to relative
+    --adjust-extension – Adds extensions to filenames (html or css)
+    --page-requisites – Download CSS style-sheets and images required to properly display the pages
+    --no-parent – When recursing do not ascend to the parent directory. It useful for restricting the download to only a portion of the site.
 
     wget -mkEpnp http://example.org
+    
 Note: that the last p is part of np (--no-parent) and hence you see p twice in the flags.
