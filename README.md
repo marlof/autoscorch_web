@@ -8,10 +8,12 @@ The entire contents of this repo are currently copied into the AWS amplify conso
     str_domain=autoscorch.com
     str_project=scorch
     dir_workspace=/mnt/d/temp-websites/
-    git_branch=https://github.com/marlof/findmeacoach.git
+    str_target=findmeacoach
+    git_branch=https://github.com/marlof/${str_target}.git
     
     # It makes these
     url="${str_protocol}://${str_domain}"
+    cd dir_workspace
     
 Step 1: Clone
 
@@ -27,7 +29,7 @@ Step 3: Remove query strings
 
 Step 4: Reset the root
 
-    mv autoscorch.com/* .
+    cp -r  ${str_domain}/* ${str_target}/.
 
 Step 5: Commit changes
 
