@@ -11,41 +11,40 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 <head>
 <meta charset="utf-8" />
-<link rel="shortcut icon" href="../sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="canonical" href="../creating-plugins.html" />
 <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="../ansible-cheat-sheet.html" />
 <link rel="shortlink" href="42.html" />
-<title>Creating Plugins | ScORCH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="../sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Ansible Cheat Sheet | ScOrch</title>
 <style type="text/css" media="all">
-@import url("../modules/system/system.base.css%3F.css");
-@import url("../modules/system/system.menus.css%3F.css");
-@import url("../modules/system/system.messages.css%3F.css");
-@import url("../modules/system/system.theme.css%3F.css");
+@import url("../modules/system/system.base.css%3Fqgglep.css");
+@import url("../modules/system/system.menus.css%3Fqgglep.css");
+@import url("../modules/system/system.messages.css%3Fqgglep.css");
+@import url("../modules/system/system.theme.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../modules/comment/comment.css%3F.css");
-@import url("../modules/field/theme/field.css%3F.css");
-@import url("../modules/node/node.css%3F.css");
-@import url("../modules/search/search.css%3F.css");
-@import url("../modules/user/user.css%3F.css");
-@import url("../sites/all/modules/ckeditor/css/ckeditor.css%3F.css");
+@import url("../modules/field/theme/field.css%3Fqgglep.css");
+@import url("../modules/node/node.css%3Fqgglep.css");
+@import url("../modules/search/search.css%3Fqgglep.css");
+@import url("../modules/user/user.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../sites/all/themes/responsive_blog/css/color-schemes.css%3F.css");
+@import url("../sites/all/themes/responsive_blog/css/color-schemes.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../sites/all/themes/responsive_blog/style.css%3F.css");
+@import url("../sites/all/themes/responsive_blog/style.css%3Fqgglep.css");
 </style>
 <script type="text/javascript" src="../misc/jquery.js%3Fv=1.4.4"></script>
 <script type="text/javascript" src="../misc/jquery-extend-3.4.0.js%3Fv=1.4.4"></script>
+<script type="text/javascript" src="../misc/jquery-html-prefilter-3.5.0-backport.js%3Fv=1.4.4"></script>
 <script type="text/javascript" src="../misc/jquery.once.js%3Fv=1.2"></script>
-<script type="text/javascript" src="../misc/drupal.js%3F"></script>
-<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/main-menu.js%3F"></script>
-<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/pngfix.min.js%3F"></script>
+<script type="text/javascript" src="../misc/drupal.js%3Fqgglep"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/main-menu.js%3Fqgglep"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/pngfix.min.js%3Fqgglep"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"p3mk4dN0avllPDKoHUYb556YgfFEwy-cjUl7CHkK0UA","js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/themes\/responsive_blog\/css\/color-schemes.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1}},"statistics":{"data":{"nid":"42"},"url":"\/modules\/statistics\/statistics.php"}});
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"-P3nKljeEK8ZPDaXql3byRpFq0_ajxPb6ohd0uei2wM","js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/themes\/responsive_blog\/css\/color-schemes.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1}},"statistics":{"data":{"nid":"42"},"url":"\/modules\/statistics\/statistics.php"}});
 //--><!]]>
 </script>
 <!--[if lt IE 9]><script src="/sites/all/themes/responsive_blog/js/html5.js"></script><![endif]-->
@@ -56,22 +55,40 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                                 <div class="social-profile">
         <ul>
                     <li class="twitter">
-            <a target="_blank" title="ScORCH in Twitter" href="https://twitter.com/webmarcitltd">ScORCH Twitter </a>
+            <a target="_blank" title="ScOrch in Twitter" href="https://twitter.com/webmarcitltd">ScOrch Twitter </a>
           </li>                              <li class="rss">
-            <a target="_blank" title="ScORCH in RSS" href="../rss.xml">ScORCH RSS </a>
+            <a target="_blank" title="ScOrch in RSS" href="../rss.xml">ScOrch RSS </a>
           </li>
         </ul>
       </div>
         <nav id="navigation" role="navigation">
       <div id="main-menu">
         <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
-<li class="expanded active-trail"><a href="../scorch.html" title="ScOrch - Orchestration" class="active-trail">Orchestration</a><ul class="menu"><li class="first leaf active-trail"><a href="../creating-plugins.html" class="active-trail active">Creating Plugins</a></li>
-<li class="last leaf"><a href="../making-tea.html" title="Use ScOrch to produce dynamic manual instructions">Example - Making Tea</a></li>
-</ul></li>
+<li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
 <li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
 <li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
-<li class="collapsed"><a href="../community.html">Community</a></li>
-<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf active-trail"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)" class="active-trail active">Ansible Cheat Sheet</a></li>
+<li class="leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH - Login options</a></li>
+<li class="leaf"><a href="../bash-cheat-sheet.html">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">Bubblesort</a></li>
+<li class="leaf"><a href="../developer-setup.html">Developer Setup</a></li>
+<li class="leaf"><a href="../drupal-nas.html">Drupal on Nas</a></li>
+<li class="leaf"><a href="../feature-branching-centralised-workflow.html">Git Branching - Feature Workflow</a></li>
+<li class="leaf"><a href="../branching-forking-workflow.html">Git Branching - Forking Workflow</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../jenkins.html">Jenkins</a></li>
+<li class="leaf"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../private-blockchain-jobstasks.html">Private Blockchain for jobs/tasks</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../keepsafe.html">keepsafe</a></li>
+</ul></li>
+<li class="leaf"><a href="../download.html">Download</a></li>
 <li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
 </ul>      </div>
     </nav>
@@ -85,31 +102,654 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div id="primary">
       <section id="content" role="main">
         
-                                <div id="content-wrap">
-                    <h1 class="page-title">Creating Plugins</h1>                                                  <div class="region region-content">
+        <div id="breadcrumbs"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><a href="../index.html">Home</a> » <a href="../community.html" class="active-trail">Community</a> » Ansible Cheat Sheet</nav></div>                        <div id="content-wrap">
+                    <h1 class="page-title">Ansible Cheat Sheet</h1>                                                  <div class="region region-content">
   <div id="block-system-main" class="block block-system">
 
       
   <div class="content">
-                        <span property="dc:title" content="Creating Plugins" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>  
+                        <span property="dc:title" content="Ansible Cheat Sheet" class="rdf-meta element-hidden"></span>  
       
     
   <div class="content">
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Function calls available in Plugins</p>
-<p>##   StartGroup<br />
-##   EndGroup<br />
-##   Task()<br />
-##   Try()<br />
-##   Sleep()<br />
-##   Manual()<br />
-##   GetVar()</p>
-<p> </p>
-<p>• GetVar a way of passing specific run time parameters</p>
-<p>• Task that will add a specific task to a job</p>
-<p>• Try adds a task but will allow job to continue if task fails</p>
-<p>• Sleep n run the sleep command for n number of seconds</p>
-<p>• Manual force a break point for manual intervention</p>
-</div></div></div>  </div>
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><h1>An Ansible summary</h1>
+<p>Jon Warbrick, July 2014, V3.2 (for Ansible 1.7)</p>
+<h1>Configuration file</h1>
+<p><a href="http://docs.ansible.com/intro_configuration.html" rel="nofollow">intro_configuration.html</a></p>
+<p>First one found from of</p>
+<ul><li>Contents of $ANSIBLE_CONFIG</li>
+<li>./ansible.cfg</li>
+<li>~/.ansible.cfg</li>
+<li>/etc/ansible/ansible.cfg</li>
+</ul><p>Configuration settings can be overridden by environment variables - see constants.py in the source tree for names.</p>
+<h1>Patterns</h1>
+<p><a href="http://docs.ansible.com/intro_patterns.html" rel="nofollow">intro_patterns.html</a></p>
+<p>Used on the ansible command line, or in playbooks.</p>
+<ul><li>all (or *)</li>
+<li>hostname: foo.example.com</li>
+<li>groupname: webservers</li>
+<li>or: webservers:dbserver</li>
+<li>exclude: webserver:!phoenix</li>
+<li>intersection: webservers:&amp;staging</li>
+</ul><p>Operators can be chained: webservers:dbservers:&amp;staging:!phoenix</p>
+<p>Patterns can include variable substitutions: {{foo}}, wildcards: *.example.com or 192.168.1.*, and regular expressions: ~(web|db).*\.example\.com</p>
+<h1>Inventory files</h1>
+<p><a href="http://docs.ansible.com/intro_inventory.html" rel="nofollow">intro_inventory.html</a>, <a href="http://docs.ansible.com/intro_dynamic_inventory.html" rel="nofollow">intro_dynamic_inventory.html</a></p>
+<p>'INI-file' structure, blocks define groups. Hosts allowed in more than one group. Non-standard SSH port can follow hostname separated by ':' (but see also ansible_ssh_port below).</p>
+<p>Hostname ranges: www[01:50].example.com, db-[a:f].example.com</p>
+<p>Per-host variables: foo.example.com foo=bar baz=wibble</p>
+<ul><li>[foo:children]: new group foo containing all members if included groups</li>
+<li>[foo:vars]: variable definitions for all members of group foo</li>
+</ul><p>Inventory file defaults to /etc/ansible/hosts. Veritable with -i or in the configuration file. The 'file' can also be a dynamic inventory script. If a directory, all contained files are processed.</p>
+<h1>Variable files:</h1>
+<p><a href="http://docs.ansible.com/intro_inventory.html" rel="nofollow">intro_inventory.html</a></p>
+<p>YAML; given inventory file at ./hosts:</p>
+<ul><li>./group_vars/foo: variable definitions for all members of group foo</li>
+<li>./host_vars/foo.example.com: variable definitions for foo.example.com</li>
+</ul><p>group_vars and host_vars directories can also exist in the playbook directory. If both paths exist, variables in the playbook directory will be loaded second.</p>
+<h1>Behavioral inventory parameters:</h1>
+<p><a href="http://docs.ansible.com/intro_inventory.html" rel="nofollow">intro_inventory.html</a></p>
+<ul><li>ansible_ssh_host</li>
+<li>ansible_ssh_port</li>
+<li>ansible_ssh_user</li>
+<li>ansible_ssh_pass</li>
+<li>ansible_sudo_pass</li>
+<li>ansible_connection</li>
+<li>ansible_ssh_private_key_file</li>
+<li>ansible_python_interpreter</li>
+<li>ansible_*_interpreter</li>
+</ul><h1>Playbooks</h1>
+<p><a href="http://docs.ansible.com/playbooks_intro.html" rel="nofollow">playbooks_intro.html</a>, <a href="http://docs.ansible.com/playbooks_roles.html" rel="nofollow">playbooks_roles.html</a></p>
+<p>Playbooks are a YAML list of one or more plays. Most (all?) keys are optional. Lines can be broken on space with continuation lines indented.</p>
+<p>Playbooks consist of a list of one or more 'plays' and/or inclusions:</p>
+<pre>
+---
+- include: playbook.yml
+- &lt;play&gt;
+- ...
+</pre><h2>Plays</h2>
+<p><a href="http://docs.ansible.com/playbooks_intro.html" rel="nofollow">playbooks_intro.html</a>, <a href="http://docs.ansible.com/playbooks_roles.htm" rel="nofollow">playbooks_roles.html</a>, <a href="http://docs.ansible.com/playbooks_variables.html" rel="nofollow">playbooks_variables.html</a>, <a href="http://docs.ansible.com/playbooks_conditionals.html" rel="nofollow">playbooks_conditionals.html</a>,<a href="http://docs.ansible.com/playbooks_acceleration.html" rel="nofollow">playbooks_acceleration.html</a>, <a href="http://docs.ansible.com/playbooks_delegation.html" rel="nofollow">playbooks_delegation.html</a>, <a href="http://docs.ansible.com/playbooks_prompts.html" rel="nofollow">playbooks_prompts.html</a>, <a href="http://docs.ansible.com/playbooks_tags.htm" rel="nofollow">playbooks_tags.html</a> <a href="https://groups.google.com/forum/#!topic/ansible-project/F9mIAfo6orc" rel="nofollow">Forum posting</a><a href="https://groups.google.com/forum/#!topic/Ansible-project/MU_ws7zynnI" rel="nofollow">Forum postinb</a></p>
+<p>Plays consist of play metadata and a sequence of task and handler definitions, and roles.</p>
+<pre>
+- hosts: webservers
+  remote_user: root
+  sudo: yes
+  sudo_user: postgress
+  su: yes
+  su_user: exim
+  gather_facts: no
+  accelerate: no
+  accelerate_port: 5099
+  any_errors_fatal: yes
+  max_fail_percentage: 30
+  connection: local
+  serial: 5
+  vars:
+    http_port: 80
+  vars_files:
+    - "vars.yml"
+    - [ "try-first.yml", "try-second-.yml" ]
+  vars_prompt:
+    - name: "my_password2"
+      prompt: "Enter password2"
+      default: "secret"
+      private: yes
+      encrypt: "md5_crypt"
+      confirm: yes
+      salt: 1234
+      salt_size: 8
+  tags: 
+    - stuff
+    - nonsence
+  pre_tasks:
+    - &lt;task&gt;
+    - ...
+  roles:
+    - common
+    - { role: common, port: 5000, when: "bar == 'Baz'", tags :[one, two] }
+    - { role: common, when: month == 'Jan' }
+    - ...
+  tasks:
+    - include: tasks.yaml
+    - include: tasks.yaml foo=bar baz=wibble
+    - include: tasks.yaml
+      vars:
+        foo: aaa 
+        baz:
+          - z
+          - y
+    - { include: tasks.yaml, foo: zzz, baz: [a,b]}
+    - include: tasks.yaml
+      when: day == 'Thursday'
+    - &lt;task&gt;
+    - ...
+  post_tasks:
+    - &lt;task&gt;
+    - ...
+  handlers:
+    - include: handlers.yml
+    - &lt;task&gt;
+    - ...
+</pre><p>Using encrypt with vars_prompt requires that <a href="http://pythonhosted.org/passlib/" rel="nofollow">Passlib</a> is installed.</p>
+<p>In addition the source code implies the availability of the following which don't <em>seem</em> to be mentioned in the documentation: name, user (deprecated), port, accelerate_ipv6, role_names, and vault_password.</p>
+<h2>Task definitions</h2>
+<p><a href="http://docs.ansible.com/playbooks_intro.html" rel="nofollow">playbooks_intro.html</a>, <a href="http://docs.ansible.com/playbooks_roles.html" rel="nofollow">playbooks_roles.html</a>, <a href="http://docs.ansible.com/playbooks_async.html" rel="nofollow">playbooks_async.html</a>, <a href="http://docs.ansible.com/%5Bplaybooks_checkmode.html" rel="nofollow">playbooks_checkmode.html</a>, <a href="http://docs.ansible.com/playbooks_delegation.html" rel="nofollow">playbooks_delegation.html</a>,<a href="http://docs.ansible.com/playbooks_environment.html" rel="nofollow">playbooks_environment.html</a>, <a href="http://docs.ansible.com/playbooks_error_handling.html" rel="nofollow">playbooks_error_handling.html</a>, <a href="http://docs.ansible.com/playbooks_tags.html" rel="nofollow">playbooks_tags.html</a> <a href="http://www.ansible.com/blog/2014/02/28/ansible-1-5-released" rel="nofollow">ansible-1-5-released</a> <a href="https://groups.google.com/forum/#!topic/ansible-project/F9mIAfo6orc" rel="nofollow">Forum posting</a><a href="https://github.com/ansible/ansible-examples/blob/master/language_features/complex_args.yml">Ansible examples</a></p>
+<p>Each task definition is a list of items, normally including at least a name and a module invocation:</p>
+<pre>
+- name: task
+  remote_user: apache
+  sudo: yes
+  sudo_user: postgress
+  sudo_pass: wibble
+  su: yes
+  su_user: exim
+  ignore_errors: True
+  delegate_to: 127.0.0.1
+  async: 45
+  poll: 5
+  always_run: no
+  run_once: false
+  meta: flush_handlers
+  no_log: true
+  environment: &lt;hash&gt;
+  environment:
+    var1: val1
+    var2: val2
+  tags: 
+    - stuff
+    - nonsence
+  &lt;module&gt;: src=template.j2 dest=/etc/foo.conf
+  action: &lt;module&gt;, src=template.j2 dest=/etc/foo.conf
+  action: &lt;module&gt;
+  args:
+      src=template.j2
+      dest=/etc/foo.conf
+  local_action: &lt;module&gt; /usr/bin/take_out_of_pool {{ inventory_hostname }}
+  when: ansible_os_family == "Debian"
+  register: result
+  failed_when: "'FAILED' in result.stderr"
+  changed_when: result.rc != 2
+  notify:
+    - restart apache
+</pre><p>delegate_to: 127.0.0.1 is implied by local_action:</p>
+<p>The forms &lt;module&gt;: &lt;args&gt;, action: &lt;module&gt; &lt;args&gt;, and local_action: &lt;module&gt; &lt;args&gt; are mutually-exclusive.</p>
+<p>Additional keys when_*, until, retries and delay are documented below under 'Loops'.</p>
+<p>In addition the source code implies the availability of the following which don't <em>seem</em> to be mentioned in the documentation:first_available_file (deprecated), transport, connection, any_errors_fatal.</p>
+<h1>Roles</h1>
+<p><a href="http://docs.ansible.com/playbooks_roles.html" rel="nofollow">playbooks_roles.html</a></p>
+<p>Directory structure:</p>
+<pre>
+playbook.yml
+roles/
+   common/
+     tasks/
+       main.yml
+     handlers/
+       main.yml
+     vars/
+       main.yml
+     meta/
+       main.yml
+     defaults/
+       main.yml
+     files/
+     templates/
+     library/
+</pre><h1>Modules</h1>
+<p><a href="http://docs.ansible.com/modules.htm" rel="nofollow">modules.htm</a>, <a href="http://docs.ansible.com/modules_by_category.html" rel="nofollow">modules_by_category.html</a></p>
+<p>List all installed modules with</p>
+<pre>
+ansible-doc --list
+</pre><p>Document a particular module with</p>
+<pre>
+ansible-doc &lt;module&gt;
+</pre><p>Show playbook snippet for specified module</p>
+<pre>
+ansible-doc -i &lt;module&gt;
+</pre><h1>Variables</h1>
+<p><a href="http://docs.ansible.com/playbooks_roles.html" rel="nofollow">playbooks_roles.html</a>, <a href="http://docs.ansible.com/playbooks_variables.html" rel="nofollow">playbooks_variables.html</a></p>
+<p>Names: letters, digits, underscores; starting with a letter.</p>
+<h2>Substitution examples:</h2>
+<ul><li>{{ var }}</li>
+<li>{{ var["key1"]["key2"]}}</li>
+<li>{{ var.key1.key2 }}</li>
+<li>{{ list[0] }}</li>
+</ul><p>YAML requires an item starting with a variable substitution to be quoted.</p>
+<h2>Sources:</h2>
+<ul><li>Highest priority:
+<ul><li>--extra-vars on the command line</li>
+</ul></li>
+<li>General:
+<ul><li>vars component of a playbook</li>
+<li>From files referenced by vars_file in a playbook</li>
+<li>From included files (incl. roles)</li>
+<li>Parameters passed to includes</li>
+<li>register: in tasks</li>
+</ul></li>
+<li>Lower priority:
+<ul><li>Inventory (set on host or group)</li>
+</ul></li>
+<li>Lower priority:
+<ul><li>Facts (see below)</li>
+<li>Any /etc/ansible/facts.d/filename.fact on managed machines (sets variables with `ansible_local.filename. prefix)</li>
+</ul></li>
+<li>Lowest priority
+<ul><li>Role defaults (from defaults/main.yml)</li>
+</ul></li>
+</ul><h2>Built-in:</h2>
+<ul><li>hostvars (e.g. hostvars[other.example.com][...])</li>
+<li>group_names (groups containing current host)</li>
+<li>groups (all groups and hosts in the inventory)</li>
+<li>inventory_hostname (current host as in inventory)</li>
+<li>inventory_hostname_short (first component of inventory_hostname)</li>
+<li>play_hosts (hostnames in scope for current play)</li>
+<li>inventory_dir (location of the inventory)</li>
+<li>inventoty_file (name of the inventory)</li>
+</ul><h2>Facts:</h2>
+<p>Run ansible hostname -m setup, but in particular:</p>
+<ul><li>ansible_distribution</li>
+<li>ansible_distribution_release</li>
+<li>ansible_distribution_version</li>
+<li>ansible_fqdn</li>
+<li>ansible_hostname</li>
+<li>ansible_os_family</li>
+<li>ansible_pkg_mgr</li>
+<li>ansible_default_ipv4.address</li>
+<li>ansible_default_ipv6.address</li>
+</ul><h2>Content of 'registered' variables:</h2>
+<p><a href="http://docs.ansible.com/playbooks_conditionals.html" rel="nofollow">playbooks_conditionals.html</a>, <a href="http://docs.ansible.com/playbooks_loops.html" rel="nofollow">playbooks_loops.html</a></p>
+<p>Depends on module. Typically includes:</p>
+<ul><li>.rc</li>
+<li>.stdout</li>
+<li>.stdout_lines</li>
+<li>.changed</li>
+<li>.msg (following failure)</li>
+<li>.results (when used in a loop)</li>
+</ul><p>See also failed, changed, etc filters.</p>
+<p>When used in a loop the result element is a list containing all responses from the module.</p>
+<h2>Additionally available in templates:</h2>
+<ul><li>ansible_managed: string containing the information below</li>
+<li>template_host: node name of the templateâ��s machine</li>
+<li>template_uid: the owner</li>
+<li>template_path: absolute path of the template</li>
+<li>template_fullpath: the absolute path of the template</li>
+<li>template_run_date: the date that the template was rendered</li>
+</ul><h1>Filters</h1>
+<p><a href="http://docs.ansible.com/playbooks_variables.html" rel="nofollow">playbooks_variables.html</a></p>
+<ul><li>{{ var | to_nice_json }}</li>
+<li>{{ var | to_json }}</li>
+<li>{{ var | from_json }}</li>
+<li>{{ var | to_nice_yml }}</li>
+<li>{{ var | to_yml }}</li>
+<li>{{ var | from_yml }}</li>
+<li>{{ result | failed }}</li>
+<li>{{ result | changed }}</li>
+<li>{{ result | success }}</li>
+<li>{{ result | skipped }}</li>
+<li>{{ var | manditory }}</li>
+<li>{{ var | default(5) }}</li>
+<li>{{ list1 | unique }}</li>
+<li>{{ list1 | union(list2) }}</li>
+<li>{{ list1 | intersect(list2) }}</li>
+<li>{{ list1 | difference(list2) }}</li>
+<li>{{ list1 | symmetric_difference(list2) }}</li>
+<li>{{ ver1 | version_compare(ver2, operator='&gt;=', strict=True }}</li>
+<li>{{ list | random }}</li>
+<li>{{ number | random }}</li>
+<li>{{ number | random(start=1, step=10) }}</li>
+<li>{{ list | join(" ") }}</li>
+<li>{{ path | basename }}</li>
+<li>{{ path | dirname }}</li>
+<li>{{ path | expanduser }}</li>
+<li>{{ path | realpath }}</li>
+<li>{{ var | b64decode }}</li>
+<li>{{ var | b64encode }}</li>
+<li>{{ filename | md5 }}</li>
+<li>{{ var | bool }}</li>
+<li>{{ var | int }}</li>
+<li>{{ var | quote }}</li>
+<li>{{ var | md5 }}</li>
+<li>{{ var | fileglob }}</li>
+<li>{{ var | match }}</li>
+<li>{{ var | search }}</li>
+<li>{{ var | regex }}</li>
+<li>{{ var | regexp_replace('from', 'to' )}}</li>
+</ul><p>See also <a href="http://jinja.pocoo.org/docs/templates/#builtin-filters" rel="nofollow">default jinja2 filters</a>. In YAML, values starting { must be quoted.</p>
+<h1>Lookups</h1>
+<p><a href="http://docs.ansible.com/playbooks_lookups.html" rel="nofollow">playbooks_lookups.html</a></p>
+<p>Lookups are evaluated on the control machine.</p>
+<ul><li>{{ lookup('file', '/etc/foo.txt') }}</li>
+<li>{{ lookup('password', '/tmp/passwordfile length=20 chars=ascii_letters,digits') }}</li>
+<li>{{ lookup('env','HOME') }}</li>
+<li>{{ lookup('pipe','date') }}</li>
+<li>{{ lookup('redis_kv', 'redis://localhost:6379,somekey') }}</li>
+<li>{{ lookup('dnstxt', 'example.com') }}</li>
+<li>{{ lookup('template', './some_template.j2') }}</li>
+</ul><p>Lookups can be assigned to variables and will be evaluated each time the variable is used.</p>
+<p>Lookup plugins also support loop iteration (see below).</p>
+<h1>Conditions</h1>
+<p><a href="http://docs.ansible.com/playbooks_conditionals.html" rel="nofollow">playbooks_conditionals.html</a></p>
+<p>when: &lt;condition&gt;, where condition is:</p>
+<ul><li>var == "Vaue", var &gt;= 5, etc.</li>
+<li>var, where var coreces to boolean (yes, true, True, TRUE)</li>
+<li>var is defined, var is not defined</li>
+<li>&lt;condition1&gt; and &lt;condition2&gt; (also or?)</li>
+</ul><p>Combined with with_items, the when statement is processed for each item.</p>
+<p>when can also be applied to includes and roles. Conditional Imports and variable substitution in file and template names can avoid the need for explicit conditionals.</p>
+<h1>Loops</h1>
+<p><a href="http://docs.ansible.com/playbooks_loops.html" rel="nofollow">playbooks_loops.html</a></p>
+<p>In addition the source code implies the availability of the following which don't <em>seem</em> to be mentioned in the documentation: csvfile, etcd, inventory_hostname.</p>
+<h2>Standard:</h2>
+<pre>
+- user: name={{ item }} state=present groups=wheel
+  with_items:
+    - testuser1
+    - testuser2
+   
+- name: add several users
+  user: name={{ item.name }} state=present groups={{ item.groups }}
+  with_items:
+    - { name: 'testuser1', groups: 'wheel' }
+    - { name: 'testuser2', groups: 'root' }
+
+  with_items: somelist
+</pre><h2>Nested:</h2>
+<pre>
+- mysql_user: name={{ item[0] }} priv={{ item[1] }}.*:ALL                
+                           append_privs=yes password=foo
+  with_nested:
+    - [ 'alice', 'bob', 'eve' ]
+    - [ 'clientdb', 'employeedb', 'providerdb' ]
+</pre><h2>Over hashes:</h2>
+<p>Given</p>
+<pre>
+---
+users:
+  alice:
+    name: Alice Appleworth
+    telephone: 123-456-7890
+  bob:
+    name: Bob Bananarama
+    telephone: 987-654-3210
+    
+tasks:
+  - name: Print phone records
+    debug: msg="User {{ item.key }} is {{ item.value.name }} 
+                     ({{ item.value.telephone }})"
+    with_dict: users
+</pre><h2>Fileglob:</h2>
+<pre>
+- copy: src={{ item }} dest=/etc/fooapp/ owner=root mode=600
+  with_fileglob:
+    - /playbooks/files/fooapp/*
+</pre><p>In a role, relative paths resolve relative to the roles/&lt;rolename&gt;/files directory.</p>
+<h2>With content of file:</h2>
+<p>(see example for authorized_key module)</p>
+<pre>
+- authorized_key: user=deploy key="{{ item }}"
+  with_file:
+    - public_keys/doe-jane
+    - public_keys/doe-john
+</pre><p>See also the file lookup when the content of a file is needed.</p>
+<h2>Parallel sets of data:</h2>
+<p>Given</p>
+<pre>
+---
+alpha: [ 'a', 'b', 'c', 'd' ]
+numbers:  [ 1, 2, 3, 4 ]
+
+- debug: msg="{{ item.0 }} and {{ item.1 }}"
+  with_together:
+    - alpha
+    - numbers
+</pre><h2>Subelements:</h2>
+<p>Given</p>
+<pre>
+---
+users:
+  - name: alice
+    authorized:
+      - /tmp/alice/onekey.pub
+      - /tmp/alice/twokey.pub
+  - name: bob
+    authorized:
+      - /tmp/bob/id_rsa.pub
+
+- authorized_key: "user={{ item.0.name }} 
+                   key='{{ lookup('file', item.1) }}'"
+  with_subelements:
+     - users
+     - authorized
+</pre><h2>Integer sequence:</h2>
+<p>Decimal, hexadecimal (0x3f8) or octal (0600)</p>
+<pre>
+- user: name={{ item }} state=present groups=evens
+  with_sequence: start=0 end=32 format=testuser%02x
+      
+  with_sequence: start=4 end=16 stride=2
+      
+  with_sequence: count=4
+</pre><h2>Random choice:</h2>
+<pre>
+- debug: msg={{ item }}
+  with_random_choice:
+     - "go through the door"
+     - "drink from the goblet"
+     - "press the red button"
+     - "do nothing"
+</pre><h2>Do-Until:</h2>
+<pre>
+- action: shell /usr/bin/foo
+  register: result
+  until: result.stdout.find("all systems go") != -1
+  retries: 5
+  delay: 10
+</pre><h2>Results of a local program:</h2>
+<pre>
+- name: Example of looping over a command result
+  shell: /usr/bin/frobnicate {{ item }}
+  with_lines: /usr/bin/frobnications_per_host 
+                       --param {{ inventory_hostname }}
+</pre><p>To loop over the results of a remote program, use register: result and then with_items: result.stdout_lines in a subsequent task.</p>
+<h2>Indexed list:</h2>
+<pre>
+- name: indexed loop demo
+  debug: msg="at array position {{ item.0 }} there is 
+                                     a value {{ item.1 }}"
+  with_indexed_items: some_list
+</pre><h2>Flattened list:</h2>
+<pre>
+---
+# file: roles/foo/vars/main.yml
+packages_base:
+  - [ 'foo-package', 'bar-package' ]
+packages_apps:
+  - [ ['one-package', 'two-package' ]]
+  - [ ['red-package'], ['blue-package']]
+  
+- name: flattened loop demo
+  yum: name={{ item }} state=installed
+  with_flattened:
+    - packages_base
+    - packages_apps      
+</pre><h2>First found:</h2>
+<pre>
+- name: template a file
+  template: src={{ item }} dest=/etc/myapp/foo.conf
+  with_first_found:
+    - files:
+        - {{ ansible_distribution }}.conf
+        - default.conf
+      paths:
+         - search_location_one/somedir/
+         - /opt/other_location/somedir/
+</pre><h1>Tags</h1>
+<p>Both plays and tasks support a tags: attribute.</p>
+<pre>
+- template: src=templates/src.j2 dest=/etc/foo.conf
+  tags:
+    - configuration
+</pre><p>Tags can be applied to roles and includes (effectively tagging all included tasks)</p>
+<pre>
+roles:
+    - { role: webserver, port: 5000, tags: [ 'web', 'foo' ] }
+
+- include: foo.yml tags=web,foo
+</pre><p>To select by tag:</p>
+<pre>
+ansible-playbook example.yml --tags "configuration,packages"
+ansible-playbook example.yml --skip-tags "notification"
+</pre><h1>Command lines</h1>
+<h2>ansible</h2>
+<pre>
+Usage: ansible &lt;host-pattern&gt; [options]
+
+Options:
+  -a MODULE_ARGS, --args=MODULE_ARGS
+                        module arguments
+  -k, --ask-pass        ask for SSH password
+  --ask-su-pass         ask for su password
+  -K, --ask-sudo-pass   ask for sudo password
+  --ask-vault-pass      ask for vault password
+  -B SECONDS, --background=SECONDS
+                        run asynchronously, failing after X seconds
+                        (default=N/A)
+  -C, --check           don't make any changes; instead, try to predict some
+                        of the changes that may occur
+  -c CONNECTION, --connection=CONNECTION
+                        connection type to use (default=smart)
+  -f FORKS, --forks=FORKS
+                        specify number of parallel processes to use
+                        (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory-file=INVENTORY
+                        specify inventory host file
+                        (default=/etc/ansible/hosts)
+  -l SUBSET, --limit=SUBSET
+                        further limit selected hosts to an additional pattern
+  --list-hosts          outputs a list of matching hosts; does not execute
+                        anything else
+  -m MODULE_NAME, --module-name=MODULE_NAME
+                        module name to execute (default=command)
+  -M MODULE_PATH, --module-path=MODULE_PATH
+                        specify path(s) to module library
+                        (default=/usr/share/ansible)
+  -o, --one-line        condense output
+  -P POLL_INTERVAL, --poll=POLL_INTERVAL
+                        set the poll interval if using -B (default=15)
+  --private-key=PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  -S, --su              run operations with su
+  -R SU_USER, --su-user=SU_USER
+                        run operations with su as this user (default=root)
+  -s, --sudo            run operations with sudo (nopasswd)
+  -U SUDO_USER, --sudo-user=SUDO_USER
+                        desired sudo user (default=root)
+  -T TIMEOUT, --timeout=TIMEOUT
+                        override the SSH timeout in seconds (default=10)
+  -t TREE, --tree=TREE  log output to this directory
+  -u REMOTE_USER, --user=REMOTE_USER
+                        connect as this user (default=jw35)
+  --vault-password-file=VAULT_PASSWORD_FILE
+                        vault password file
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+</pre><h2>ansible-playbook</h2>
+<pre>
+Usage: ansible-playbook playbook.yml
+
+Options:
+  -k, --ask-pass        ask for SSH password
+  --ask-su-pass         ask for su password
+  -K, --ask-sudo-pass   ask for sudo password
+  --ask-vault-pass      ask for vault password
+  -C, --check           don't make any changes; instead, try to predict some
+                        of the changes that may occur
+  -c CONNECTION, --connection=CONNECTION
+                        connection type to use (default=smart)
+  -D, --diff            when changing (small) files and templates, show the
+                        differences in those files; works great with --check
+  -e EXTRA_VARS, --extra-vars=EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON
+  -f FORKS, --forks=FORKS
+                        specify number of parallel processes to use
+                        (default=5)
+  -h, --help            show this help message and exit
+  -i INVENTORY, --inventory-file=INVENTORY
+                        specify inventory host file
+                        (default=/etc/ansible/hosts)
+  -l SUBSET, --limit=SUBSET
+                        further limit selected hosts to an additional pattern
+  --list-hosts          outputs a list of matching hosts; does not execute
+                        anything else
+  --list-tasks          list all tasks that would be executed
+  -M MODULE_PATH, --module-path=MODULE_PATH
+                        specify path(s) to module library
+                        (default=/usr/share/ansible)
+  --private-key=PRIVATE_KEY_FILE
+                        use this file to authenticate the connection
+  --skip-tags=SKIP_TAGS
+                        only run plays and tasks whose tags do not match these
+                        values
+  --start-at-task=START_AT
+                        start the playbook at the task matching this name
+  --step                one-step-at-a-time: confirm each task before running
+  -S, --su              run operations with su
+  -R SU_USER, --su-user=SU_USER
+                        run operations with su as this user (default=root)
+  -s, --sudo            run operations with sudo (nopasswd)
+  -U SUDO_USER, --sudo-user=SUDO_USER
+                        desired sudo user (default=root)
+  --syntax-check        perform a syntax check on the playbook, but do not
+                        execute it
+  -t TAGS, --tags=TAGS  only run plays and tasks tagged with these values
+  -T TIMEOUT, --timeout=TIMEOUT
+                        override the SSH timeout in seconds (default=10)
+  -u REMOTE_USER, --user=REMOTE_USER
+                        connect as this user (default=jw35)
+  --vault-password-file=VAULT_PASSWORD_FILE
+                        vault password file
+  -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                        connection debugging)
+  --version             show program's version number and exit
+</pre><h2>ansible-vault</h2>
+<p>playbooks_vault.html</p>
+<pre>
+Usage: ansible-vault [create|decrypt|edit|encrypt|rekey] [--help] [options] file_name
+
+Options:
+  -h, --help  show this help message and exit
+
+See 'ansible-vault &lt;command&gt; --help' for more information on a specific command.
+</pre><h2>ansible-doc</h2>
+<pre>
+Usage: ansible-doc [options] [module...]
+
+Show Ansible module documentation
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -M MODULE_PATH, --module-path=MODULE_PATH
+                             Ansible modules/ directory
+  -l, --list            List available modules
+  -s, --snippet         Show playbook snippet for specified module(s)
+  -v                    Show version number and exit
+</pre><h2>ansible-galaxy</h2>
+<pre>
+Usage: ansible-galaxy [init|info|install|list|remove] [--help] [options] ...
+
+Options:
+  -h, --help  show this help message and exit
+
+  See 'ansible-galaxy &lt;command&gt; --help' for more information on a
+  specific command 
+</pre><h2>ansible-pull</h2>
+<pre>
+Usage: ansible-pull [options] [playbook.yml]
+
+ansible-pull: error: URL for repository not specified, use -h for help</pre></div></div></div>  </div>
 
       <footer>
           </footer>
@@ -131,13 +771,31 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     
   <div class="content">
     <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
-<li class="expanded active-trail"><a href="../scorch.html" title="ScOrch - Orchestration" class="active-trail">Orchestration</a><ul class="menu"><li class="first leaf active-trail"><a href="../creating-plugins.html" class="active-trail active">Creating Plugins</a></li>
-<li class="last leaf"><a href="../making-tea.html" title="Use ScOrch to produce dynamic manual instructions">Example - Making Tea</a></li>
-</ul></li>
+<li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
 <li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
 <li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
-<li class="collapsed"><a href="../community.html">Community</a></li>
-<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf active-trail"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)" class="active-trail active">Ansible Cheat Sheet</a></li>
+<li class="leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH - Login options</a></li>
+<li class="leaf"><a href="../bash-cheat-sheet.html">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">Bubblesort</a></li>
+<li class="leaf"><a href="../developer-setup.html">Developer Setup</a></li>
+<li class="leaf"><a href="../drupal-nas.html">Drupal on Nas</a></li>
+<li class="leaf"><a href="../feature-branching-centralised-workflow.html">Git Branching - Feature Workflow</a></li>
+<li class="leaf"><a href="../branching-forking-workflow.html">Git Branching - Forking Workflow</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../jenkins.html">Jenkins</a></li>
+<li class="leaf"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../private-blockchain-jobstasks.html">Private Blockchain for jobs/tasks</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../keepsafe.html">keepsafe</a></li>
+</ul></li>
+<li class="leaf"><a href="../download.html">Download</a></li>
 <li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
 </ul>  </div>
   
@@ -153,7 +811,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
           </div>
 
     <div id="bottom" class="clearfix">
-      <div class="copyright">Copyright &copy; 2019, <a href="../index.html">ScORCH</a></div>
+      <div class="copyright">Copyright &copy; 2020, <a href="../index.html">ScOrch</a></div>
       <div class="credit">Theme by  <a href="http://www.devsaran.com" target="_blank">Devsaran</a></div>
     </div>
   </footer>
@@ -165,6 +823,6 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 
 
 
-  <script type="text/javascript" src="../modules/statistics/statistics.js%3F"></script>
+  <script type="text/javascript" src="../modules/statistics/statistics.js%3Fqgglep"></script>
 </body>
 </html>
