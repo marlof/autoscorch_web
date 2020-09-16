@@ -19,7 +19,7 @@ Step 1: Clone
 
 Step 2: Mirror the website
 
-    wget -q --mirror -p --adjust-extension -e robots=off --base=./ -k -P ./ ${git_branch}
+    wget -q --mirror -p --adjust-extension -e robots=off --base=./ -k -P ./ ${url}
 
 Step 3: Remove query strings
 
