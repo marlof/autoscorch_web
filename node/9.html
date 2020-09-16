@@ -11,41 +11,40 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 <head>
 <meta charset="utf-8" />
-<link rel="shortcut icon" href="../sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="canonical" href="../passwd-readable-cmdb.html" />
 <meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="../k8s.html" />
 <link rel="shortlink" href="9.html" />
-<title>Example - /etc/passwd as readable cmdb | ScORCH</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="shortcut icon" href="../sites/all/themes/responsive_blog/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>K8S | ScOrch</title>
 <style type="text/css" media="all">
-@import url("../modules/system/system.base.css%3F.css");
-@import url("../modules/system/system.menus.css%3F.css");
-@import url("../modules/system/system.messages.css%3F.css");
-@import url("../modules/system/system.theme.css%3F.css");
+@import url("../modules/system/system.base.css%3Fqgglep.css");
+@import url("../modules/system/system.menus.css%3Fqgglep.css");
+@import url("../modules/system/system.messages.css%3Fqgglep.css");
+@import url("../modules/system/system.theme.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../modules/comment/comment.css%3F.css");
-@import url("../modules/field/theme/field.css%3F.css");
-@import url("../modules/node/node.css%3F.css");
-@import url("../modules/search/search.css%3F.css");
-@import url("../modules/user/user.css%3F.css");
-@import url("../sites/all/modules/ckeditor/css/ckeditor.css%3F.css");
+@import url("../modules/field/theme/field.css%3Fqgglep.css");
+@import url("../modules/node/node.css%3Fqgglep.css");
+@import url("../modules/search/search.css%3Fqgglep.css");
+@import url("../modules/user/user.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../sites/all/themes/responsive_blog/css/color-schemes.css%3F.css");
+@import url("../sites/all/themes/responsive_blog/css/color-schemes.css%3Fqgglep.css");
 </style>
 <style type="text/css" media="all">
-@import url("../sites/all/themes/responsive_blog/style.css%3F.css");
+@import url("../sites/all/themes/responsive_blog/style.css%3Fqgglep.css");
 </style>
 <script type="text/javascript" src="../misc/jquery.js%3Fv=1.4.4"></script>
 <script type="text/javascript" src="../misc/jquery-extend-3.4.0.js%3Fv=1.4.4"></script>
+<script type="text/javascript" src="../misc/jquery-html-prefilter-3.5.0-backport.js%3Fv=1.4.4"></script>
 <script type="text/javascript" src="../misc/jquery.once.js%3Fv=1.2"></script>
-<script type="text/javascript" src="../misc/drupal.js%3F"></script>
-<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/main-menu.js%3F"></script>
-<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/pngfix.min.js%3F"></script>
+<script type="text/javascript" src="../misc/drupal.js%3Fqgglep"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/main-menu.js%3Fqgglep"></script>
+<script type="text/javascript" src="../sites/all/themes/responsive_blog/js/pngfix.min.js%3Fqgglep"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"08gxOBc_JaV_zcw6joAQDv0kigjIYDgrRXRJ8SVhDN8","js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/themes\/responsive_blog\/css\/color-schemes.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1}},"statistics":{"data":{"nid":"9"},"url":"\/modules\/statistics\/statistics.php"}});
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"responsive_blog","theme_token":"_ZN9TDeAVEj6Hokqw8kKm3JgzAYEJ05dc-wBq44rcHc","js":{"modules\/statistics\/statistics.js":1,"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/themes\/responsive_blog\/js\/main-menu.js":1,"sites\/all\/themes\/responsive_blog\/js\/pngfix.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/themes\/responsive_blog\/css\/color-schemes.css":1,"sites\/all\/themes\/responsive_blog\/css\/dark.css":1,"sites\/all\/themes\/responsive_blog\/style.css":1}},"statistics":{"data":{"nid":"9"},"url":"\/modules\/statistics\/statistics.php"}});
 //--><!]]>
 </script>
 <!--[if lt IE 9]><script src="/sites/all/themes/responsive_blog/js/html5.js"></script><![endif]-->
@@ -56,9 +55,9 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
                                 <div class="social-profile">
         <ul>
                     <li class="twitter">
-            <a target="_blank" title="ScORCH in Twitter" href="https://twitter.com/webmarcitltd">ScORCH Twitter </a>
+            <a target="_blank" title="ScOrch in Twitter" href="https://twitter.com/webmarcitltd">ScOrch Twitter </a>
           </li>                              <li class="rss">
-            <a target="_blank" title="ScORCH in RSS" href="../rss.xml">ScORCH RSS </a>
+            <a target="_blank" title="ScOrch in RSS" href="../rss.xml">ScOrch RSS </a>
           </li>
         </ul>
       </div>
@@ -66,11 +65,30 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
       <div id="main-menu">
         <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
 <li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
-<li class="expanded active-trail"><a href="../scorchdb.html" title="CMDB - Single Source of Truth" class="active-trail">CMDB</a><ul class="menu"><li class="first last leaf active-trail"><a href="../passwd-readable-cmdb.html" title="Use ScOrchDB to use system files as CMDB" class="active-trail active">Example - readable cmdb</a></li>
-</ul></li>
+<li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
 <li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
-<li class="collapsed"><a href="../community.html">Community</a></li>
-<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)">Ansible Cheat Sheet</a></li>
+<li class="leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH - Login options</a></li>
+<li class="leaf"><a href="../bash-cheat-sheet.html">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">Bubblesort</a></li>
+<li class="leaf"><a href="../developer-setup.html">Developer Setup</a></li>
+<li class="leaf"><a href="../drupal-nas.html">Drupal on Nas</a></li>
+<li class="leaf"><a href="../feature-branching-centralised-workflow.html">Git Branching - Feature Workflow</a></li>
+<li class="leaf"><a href="../branching-forking-workflow.html">Git Branching - Forking Workflow</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../jenkins.html">Jenkins</a></li>
+<li class="leaf active-trail"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10" class="active-trail active">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../private-blockchain-jobstasks.html">Private Blockchain for jobs/tasks</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../keepsafe.html">keepsafe</a></li>
+</ul></li>
+<li class="leaf"><a href="../download.html">Download</a></li>
 <li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
 </ul>      </div>
     </nav>
@@ -84,38 +102,263 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
     <div id="primary">
       <section id="content" role="main">
         
-                                <div id="content-wrap">
-                    <h1 class="page-title">Example - /etc/passwd as readable cmdb</h1>                                                  <div class="region region-content">
+        <div id="breadcrumbs"><h2 class="element-invisible">You are here</h2><nav class="breadcrumb"><a href="../index.html">Home</a> » <a href="../community.html" class="active-trail">Community</a> » K8S</nav></div>                        <div id="content-wrap">
+                    <h1 class="page-title">K8S</h1>                                                  <div class="region region-content">
   <div id="block-system-main" class="block block-system">
 
       
   <div class="content">
-                        <span property="dc:title" content="Example - /etc/passwd as readable cmdb" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>  
+                        <span property="dc:title" content="K8S" class="rdf-meta element-hidden"></span>  
       
     
   <div class="content">
-    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>You can even turn readable, write protected files into scorchdb files by defining the columns on the command line</p>
-<p>Report all users  (-name) and their shell (-shell) that have /bin/false as a shell</p>
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Step required to get K8S running on Windows 10</p>
 <pre>
-$ scorchdb  --file /etc/passwd -def "name password uid gid group home shell" -fs : false -name -shell
-systemd-timesync /bin/false
-systemd-network /bin/false
-systemd-resolve /bin/false
-systemd-bus-proxy /bin/false
-syslog /bin/false
-_apt /bin/false
-lxd /bin/false
-messagebus /bin/false
-uuidd /bin/false
-dnsmasq /bin/false
-pollinate /bin/false
-
-</pre><p>--file names the file to use</p>
-<p>-fs is the field seperator</p>
-<p>-def is a list of the column definitions </p>
-<p>false is a patterm matched string</p>
-<p>-name is one of the column fields to return the values from</p>
-<p>-shell is one of the column fields to return the values from</p>
+docker login
+Username 
+Password
+</pre><p> </p>
+<p>ScOrch Task</p>
+<pre>
+Task "minikube start"
+Task "kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.10 --port=8080"
+Task "kubectl expose deployment hello-minikube --type=NodePort"
+Task "kubectl get node"
+Task "kubectl get pod"
+Task "minikube service hello-minikube --url"</pre><p> </p>
+<p> </p>
+<p>Kube pods</p>
+<pre>
+#!/bin/bash
+run_some_pods () {
+  for j in {1..20}
+  do
+    kubectl run -i -t busybox-${j} --image=busybox --restart=Never -- echo "hi" &amp;&gt; /dev/null &amp;
+  done
+  sleep 1
+  wait
+  for j in {1..20}
+  do
+    kubectl delete pods busybox-${j} --grace-period=0 --force &amp;&gt; /dev/null || true
+  done
+}
+for i in {1..3279}
+do
+  echo "Running pod batch $i"
+  run_some_pods
+done</pre><p> </p>
+<p>K8S Service Ports</p>
+<p>ClusterIP - Default and basic type. Dynamically create a stable IP on a cluster, the stable port being 8080 and the app listening on port 80 in the pods and containers </p>
+<pre>
+spec:
+  type: ClusterIP
+  selector:
+    app: web
+  ports:
+  - port: 8080
+    targetPort: 80
+</pre><p>NodePort - Maps the nodePort on every cluster node, with an internal cluster port of 8080. The App is listening on port 80 in the pods/containers and the external port on every cluster node is 31111. The nodePort is a TCP/UDP port between 30000 and 32767</p>
+<pre>
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 80
+    nodePort: 31111</pre><p>Load Balancer: Builds on top of NodePort and ClusterIP</p>
+<pre>
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+    targetPort: 8080</pre><p> </p>
+<p> </p>
+<h1>Best Practices for Running Containers and Kubernetes in Production</h1>
+<hr /><p>The container ecosystem is immature and lacks operational best practices, but adoption of containers and Kubernetes is increasing for legacy modernization and cloud-native applications. We outline best practices for I&amp;O leaders to enable and expedite container deployment in production environments.</p>
+<h3>Recommendations</h3>
+<p>Infrastructure and operations leaders responsible for the data center should:</p>
+<ul><li>
+<p>Create a container platform strategy that applies best practices across security, governance monitoring, storage, networking, container life cycle management and container orchestration.</p>
+</li>
+<li>
+<p>Start with small, simple use cases; ensure that containers are stateless and immutable; and enforce standardization, automation and federation of clusters for easier management and rapid scalability.</p>
+</li>
+<li>
+<p>Integrate container as a service or platform as a service platforms with continuous integration/continuous delivery, security and operational tools; if needed, then augment it with best-of-breed tooling that enables I&amp;O to meet business SLAs and simplify developer workflow.</p>
+</li>
+<li>
+<p>Create a platform ops team that works with application developers for platform selection and operations and is focused on continuous improvement to meet the required business SLAs of production applications.</p>
+</li>
+</ul><h2> </h2>
+<h3>Table 1: Managed Container Services in the Cloud</h3>
+<table><thead><tr><th scope="col">
+<p>Cloud Provider</p>
+</th>
+<th scope="col">
+<p>Type of Service</p>
+</th>
+<th scope="col">
+<p>Product/Service</p>
+</th>
+</tr></thead><tbody><tr><td>
+<p>Alibaba</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>Alibaba Cloud Container Service, Alibaba Cloud Container Service for Kubernetes</p>
+</td>
+</tr><tr><td>
+<p>Amazon Web Services (AWS)</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>Amazon Elastic Container Services (ECS), Amazon ECS for Kubernetes (EKS), AWS Fargate</p>
+</td>
+</tr><tr><td>
+<p>Giant Swarm</p>
+</td>
+<td>
+<p>MSP</p>
+</td>
+<td>
+<p>Giant Swarm Managed Kubernetes Infrastructure</p>
+</td>
+</tr><tr><td>
+<p>Google</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>Google Container Engine (GKE)</p>
+</td>
+</tr><tr><td>
+<p>IBM</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>IBM Cloud Kubernetes Service</p>
+</td>
+</tr><tr><td>
+<p>Microsoft</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>Azure Kubernetes Service, Azure Service Fabric</p>
+</td>
+</tr><tr><td>
+<p>Oracle</p>
+</td>
+<td>
+<p>Native Cloud Service</p>
+</td>
+<td>
+<p>OCI Container Engine for Kubernetes</p>
+</td>
+</tr><tr><td>
+<p>Platform9</p>
+</td>
+<td>
+<p>MSP</p>
+</td>
+<td>
+<p>Managed Kubernetes</p>
+</td>
+</tr><tr><td>
+<p>Red Hat</p>
+</td>
+<td>
+<p>Hosted Service</p>
+</td>
+<td>
+<p>OpenShift Dedicated &amp; Online</p>
+</td>
+</tr><tr><td>
+<p>VMware</p>
+</td>
+<td>
+<p>Hosted Service</p>
+</td>
+<td>
+<p>Cloud PKS (Beta)</p>
+</td>
+</tr></tbody></table><p>Source: Gartner (February 2019)</p>
+<p>Although Docker runtime and managed Kubernetes are becoming ubiquitous across on-premises and public cloud environments, seamless hybrid environments require better federation and service brokering than is currently available. On-premises CaaS vendors, such as Docker, Mesosphere, Rancher Labs, Red Hat and VMware/Pivotal, offer cloud-based services, with varying degrees of integration and support. Public cloud providers have also released capabilities (such as AKS on Azure Stack) or made announcements of availability for on-premises products in 2019 (GKE on-premises and AWS Outposts). Hybrid and multicloud support will be an area of rapid innovation among vendors in 2019 and beyond.</p>
+<p><em><em>Recommendations:</em></em></p>
+<ul><li>
+<p>Objectively evaluate your organization’s ability to deploy and manage the appropriate tooling, and strongly consider cloud container management services as an alternative.</p>
+</li>
+<li>
+<p>Choose the points of lock-in carefully; where possible, implement alternative open-source software.</p>
+</li>
+<li>
+<p>Select providers with consistent operating models across hybrid environments that offer single-pane-of-glass management of federated clusters and open service brokers that simplify IaaS self-service.</p>
+</li>
+</ul><p> </p>
+<table><thead><tr><th scope="col">
+<p>Technology</p>
+</th>
+<th scope="col">
+<p>Things to Look For</p>
+</th>
+<th scope="col">
+<p>Sample List of Vendors</p>
+</th>
+</tr></thead><tbody><tr><td>
+<p>Monitoring</p>
+</td>
+<td>
+<p>Service visualization, proactive alerting, compliance enforcement, auditing</p>
+</td>
+<td>
+<p>Datadog, Dynatrace, Instana, Sysdig</p>
+</td>
+</tr><tr><td>
+<p>Networking</p>
+</td>
+<td>
+<p>Asset discovery, IP management for ephemeral containers, policy enforcement</p>
+</td>
+<td>
+<p>Cisco, Juniper Networks, Tigera, Weaveworks</p>
+</td>
+</tr><tr><td>
+<p>Security</p>
+</td>
+<td>
+<p>OS hardening, secure runtime and orchestration, image security, traffic isolation and lockdown</p>
+</td>
+<td>
+<p>Aqua Security, NeuVector, StackRox, Twistlock</p>
+</td>
+</tr><tr><td>
+<p>Service Mesh</p>
+</td>
+<td>
+<p>Service discovery, load balancing, authentication and access control, quality of service</p>
+</td>
+<td>
+<p>Aspen Mesh, Avi Networks, AWS (App Mesh), Buoyant (Linkerd), Tetrate.io (Istio in Beta), VMware (NSX Service Mesh)</p>
+</td>
+</tr><tr><td>
+<p>Storage</p>
+</td>
+<td>
+<p>Container-native data services, resource coalescing, multiprotocol support</p>
+</td>
+<td>
+<p>Diamanti, NetApp, Portworx, Robin Systems, StorageOS</p>
+</td>
+</tr></tbody></table><p>Source: Gartner (February 2019)</p>
+<p> </p>
+<p> </p>
 </div></div></div>  </div>
 
       <footer>
@@ -139,11 +382,30 @@ pollinate /bin/false
   <div class="content">
     <ul class="menu"><li class="first leaf"><a href="../index.html">Home</a></li>
 <li class="collapsed"><a href="../scorch.html" title="ScOrch - Orchestration">Orchestration</a></li>
-<li class="expanded active-trail"><a href="../scorchdb.html" title="CMDB - Single Source of Truth" class="active-trail">CMDB</a><ul class="menu"><li class="first last leaf active-trail"><a href="../passwd-readable-cmdb.html" title="Use ScOrchDB to use system files as CMDB" class="active-trail active">Example - readable cmdb</a></li>
-</ul></li>
+<li class="collapsed"><a href="../scorchdb.html" title="CMDB - Single Source of Truth">CMDB</a></li>
 <li class="collapsed"><a href="../obrar.html" title="Obrar - The Work Horse">Framework</a></li>
-<li class="collapsed"><a href="../community.html">Community</a></li>
-<li class="collapsed"><a href="../download.html">Download</a></li>
+<li class="expanded active-trail"><a href="../community.html" class="active-trail">Community</a><ul class="menu"><li class="first leaf"><a href="../aws-cli-cheat-sheet.html" title="AWS CLI Useful Bash calls">AWS CLI BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../ansible-cheat-sheet.html" title="Ansible Cheat Sheet (older version)">Ansible Cheat Sheet</a></li>
+<li class="leaf"><a href="../bash-colour-menu.html">BASH - Colour menu</a></li>
+<li class="leaf"><a href="../history-shared-accounts.html">BASH - Login options</a></li>
+<li class="leaf"><a href="../bash-cheat-sheet.html">BASH Cheat Sheet</a></li>
+<li class="leaf"><a href="../bsm.html">BASH Substring manipulation</a></li>
+<li class="leaf"><a href="../bubblesort.html">Bubblesort</a></li>
+<li class="leaf"><a href="../developer-setup.html">Developer Setup</a></li>
+<li class="leaf"><a href="../drupal-nas.html">Drupal on Nas</a></li>
+<li class="leaf"><a href="../feature-branching-centralised-workflow.html">Git Branching - Feature Workflow</a></li>
+<li class="leaf"><a href="../branching-forking-workflow.html">Git Branching - Forking Workflow</a></li>
+<li class="leaf"><a href="../github-actions.html">GitHub Actions</a></li>
+<li class="leaf"><a href="../jenkins.html">Jenkins</a></li>
+<li class="leaf active-trail"><a href="../k8s.html" title="Kubernetes Setup on Ubuntu for Windows 10" class="active-trail active">K8S</a></li>
+<li class="leaf"><a href="../powershell.html">Powershell Snippets</a></li>
+<li class="leaf"><a href="../private-blockchain-jobstasks.html">Private Blockchain for jobs/tasks</a></li>
+<li class="leaf"><a href="../running-virtualenv.html" title="Running in a VirtualEnv">VirtualEnv</a></li>
+<li class="leaf"><a href="../rsync.html">WD Live - rsync</a></li>
+<li class="leaf"><a href="../without-cron.html" title="When only CRON will do">Without CRON</a></li>
+<li class="last leaf"><a href="../keepsafe.html">keepsafe</a></li>
+</ul></li>
+<li class="leaf"><a href="../download.html">Download</a></li>
 <li class="last collapsed"><a href="../documentation.html" title="ScOrch Documentation">Documentation</a></li>
 </ul>  </div>
   
@@ -159,7 +421,7 @@ pollinate /bin/false
           </div>
 
     <div id="bottom" class="clearfix">
-      <div class="copyright">Copyright &copy; 2019, <a href="../index.html">ScORCH</a></div>
+      <div class="copyright">Copyright &copy; 2020, <a href="../index.html">ScOrch</a></div>
       <div class="credit">Theme by  <a href="http://www.devsaran.com" target="_blank">Devsaran</a></div>
     </div>
   </footer>
@@ -171,6 +433,6 @@ pollinate /bin/false
 
 
 
-  <script type="text/javascript" src="../modules/statistics/statistics.js%3F"></script>
+  <script type="text/javascript" src="../modules/statistics/statistics.js%3Fqgglep"></script>
 </body>
 </html>

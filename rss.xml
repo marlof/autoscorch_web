@@ -1,96 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xml:base="http://autoscorch.com"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xml:base="http://192.168.3.60:35000"  xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel>
- <title>ScORCH</title>
- <link>http://autoscorch.com</link>
+ <title>ScOrch</title>
+ <link>http://192.168.3.60:35000</link>
  <description></description>
  <language>en</language>
-<item>
- <title>Bubblesort</title>
- <link>http://autoscorch.com/bubblesort</link>
- <description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot; property=&quot;content:encoded&quot;&gt;&lt;p&gt;bubblesort.sh&lt;/p&gt;
-&lt;p&gt;This is simply a demostration of how bubble sort works&lt;/p&gt;
-&lt;pre&gt;
-​#!/bin/bash
-
-inputresults()
-{
-  markFile=&quot;marks.txt&quot;
-  read -p &quot;Input first student name: &quot; name
-  while [ &quot;$name&quot; != &quot;xxx&quot; ] ; do
-    read -p &quot;Input student mark: &quot; mark
-    echo &quot;$name,$mark&quot; &amp;gt;&amp;gt; $markFile
-    read -p &quot;Input next student name, (xxx to end) :&quot; name
-  done
-}
-
-readresults()
-{
-  read line &amp;lt; mark.txt
-}
-
-clear
-studentNames=(&quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot;)
-studentMarks=(0 0 0 0 0 0 0 0 0)
-set | grep student
-
-markFile=marks.txt
-echo &quot;names and marks will be stored in two arrays&quot;
-
-for n in 9 8 7 6 5 4 3 2 1; do
-   name=$(tail -$n $markFile | head -1| cut -d, -f1)
-   mark=$(tail -$n $markFile | head -1| cut -d, -f2)
-   (( pointer = n -1 ))
-   studentNames[$pointer]=$name
-   studentMarks[$pointer]=$mark
-   # next n
-done
-echo &quot;Arrays are now&quot;
-
-DEBUG=1
-set | grep student
-
-  for i in  0 1 2 3 4 5 6 7 8 ; do
-    (( x = 8 - i ))
-    j=0
-    while (( j &amp;lt; x )) ; do
-      (( j1 = j + 1 ))
-      clear
-      (( DEBUG == 1 )) &amp;amp;&amp;amp; set | grep studentNames | grep ${studentNames[$j]}
-      echo &quot;if position $j ${studentNames[$j]} &amp;gt; position $j1 ${studentNames[${j1}]} then swap&quot;
-      if [[ &quot;${studentNames[$j]}&quot; &amp;gt; &quot;${studentNames[${j1}]}&quot; ]] ; then
-            (( DEBUG == 1 )) &amp;amp;&amp;amp; read &amp;amp;&amp;amp; echo &quot; Swapping ${studentNames[$j]} and ${studentNames[${j1}]}&quot;
-        temp=${studentNames[${j1}]}
-        studentNames[${j1}]=${studentNames[$j]}
-        studentNames[${j}]=$temp
-        (( DEBUG == 1 )) &amp;amp;&amp;amp; set | grep studentNames | grep ${studentNames[$j1]}
-      else
-        (( DEBUG == 1 )) &amp;amp;&amp;amp; read &amp;amp;&amp;amp; echo &quot;Dont need to swap&quot;
-        (( DEBUG == 1 )) &amp;amp;&amp;amp; set | grep studentNames | grep ${studentNames[$j]}
-      fi
-      (( DEBUG == 1 )) &amp;amp;&amp;amp; read
-      #echo  &quot;$i, $j&quot;
-      (( j ++ ))
-    done
-  done
-
-&lt;/pre&gt;&lt;p&gt;With marks.txt&lt;/p&gt;
-&lt;pre&gt;
-Jo,65
-Yan,88
-Paul,76
-Daisy,88
-Mabel,80
-Mavis,79
-Anna,58
-Billy,88
-Keith,56
-&lt;/pre&gt;&lt;pre&gt;
- &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
- <pubDate>Mon, 16 Apr 2018 17:23:35 +0000</pubDate>
- <dc:creator>marc</dc:creator>
- <guid isPermaLink="false">18 at http://autoscorch.com</guid>
- <comments>http://autoscorch.com/bubblesort#comments</comments>
-</item>
 </channel>
 </rss>
