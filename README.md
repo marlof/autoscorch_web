@@ -25,7 +25,7 @@ Step 2: Mirror the website
 
 Step 3: Remove query strings
 
-    find -name "*.*\?*" | while read filename; do mv "$filename" "${filename%%\?*}"; done
+    find  ${str_target} -name "*.*\?*" | while read filename; do mv "$filename" "${filename%%\?*}"; done
 
 Step 4: Reset the root
 
