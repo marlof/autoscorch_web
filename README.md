@@ -42,6 +42,7 @@ Step 8: Merge
 
 # Drupal-NAS way
 
+
     # Based on Winbuntu
     dir_workspace=/tmp/temp-websites/
     mkdir -p $dir_workspace
@@ -57,11 +58,14 @@ Step 8: Merge
     cd ${str_dir_workspace}
     git clone --single-branch --branch dev ${git_branch}
     cd ${str_dir_workspace}/${str_project}
+
     
 Works but there is a "?" issue:
 
     wget --mirror --convert-links --adjust-extension --page-requisites --no-parent "${url}"
+
     find  ${str_target} -name "*.*\?*" | while read filename; do mv "$filename" "${filename%%\?*}"; done
+
 
 Trying:
 
@@ -80,4 +84,3 @@ Wget
     wget -mkEpnp http://example.org
     
 Note: that the last p is part of np (--no-parent) and hence you see p twice in the flags.
-
