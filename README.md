@@ -1,4 +1,4 @@
-# findmeacoach
+coach
 Test Website
 
 The entire contents of this repo are currently copied into the AWS amplify console and built in a docker container at https://www.findmeacoach.co.uk
@@ -42,22 +42,30 @@ Step 8: Merge
 
 # Drupal-NAS way
 
-    # Users Sets These
-    str_protocol=http
-    str_domain=autoscorch.com
-    str_project=scorch
-    dir_workspace=/mnt/d/temp-websites/
+
+    # Based on Winbuntu
+    dir_workspace=/tmp/temp-websites/
+    mkdir -p $dir_workspace
+    str_target=findmeacoach
+    git_branch=https://github.com/marlof/${str_target}.git
+
     
     # It makes these
-    url="${str_protocol}://${str_domain}"
+    url="http://drupal-nas:35000"
     
     # System setup done here
-    mkdir -p ${str_dir_workspace}/${str_project}
+    mkdir -p ${str_dir_workspace}
     cd ${str_dir_workspace}
+    git clone --single-branch --branch dev ${git_branch}
+    cd ${str_dir_workspace}/${str_project}
+
     
 Works but there is a "?" issue:
 
     wget --mirror --convert-links --adjust-extension --page-requisites --no-parent "${url}"
+
+    find  ${str_target} -name "*.*\?*" | while read filename; do mv "$filename" "${filename%%\?*}"; done
+
 
 Trying:
 
