@@ -125,10 +125,12 @@ export PATH=${PATH}:${INSTALL_DIR}
 <p>Decide on a scorch base directory, system owner account and group account.</p>
 <p>Have your friendly system administrators create the account, group and directory as well as assigning users to the group. In the example below user scorch, group scorch and directory /opt/scorch have been chosen.</p>
 <p>A simple way to create the users is shown below and as the directory structure for scorch handles its own logs, the directory has been given its own file system. Your organisation my have other requirements or products to setup the accounts. There may be other considerations in your organisation. If in doubt consult your Linux Support team:</p>
+
 <pre>
 $ dir_Base=/opt/scorch # Example base directory
 $ adduser -U -m -d ${dir_Base} scorch # scorch framework owner
 </pre>
+
 <p>str_Group</p>
 <p>There is a new group feature (available from 1.54) to overcome a requirement for all users to be in the same primary group. If you wish to use ScOrch for collaboration work, chose a group by un-commenting out the export str_Group line in the main scorch program</p>
 <pre>
@@ -180,6 +182,7 @@ rm ./install
 
 ./scorch -install
 </pre>
+
 </div></div></div>  </div>
 
       <footer>
