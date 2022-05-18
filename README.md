@@ -13,7 +13,8 @@ The entire contents of this repo are currently copied into the AWS amplify conso
     
     # It makes these
     url="${str_protocol}://${str_domain}"
-    cd dir_workspace
+    mkdir -p ${dir_workspace}
+    cd ${dir_workspace}
     
 Step 1: Clone
 

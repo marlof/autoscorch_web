@@ -102,14 +102,14 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 <h1>1.<a id="1" name="1"></a> Quick Install - Latest Version (curl example)</h1>
 <p>​Use the new <strong>install</strong> script to install the latest version of scorch suite in your current directory.</p>
 <pre>
-curl -o install http://www.autoscorch.com/downloads/install &amp;&amp; chmod a+x install &amp;&amp; ./install
+curl -o install https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/install &amp;&amp; chmod a+x install &amp;&amp; ./install
 </pre><h1>2.<a id="2" name="2"></a> Install into a chosen directory (wget example)</h1>
 <p>You may wish to start in a directory under /tmp: </p>
 <pre>
 mkdir -p /tmp/scorchlatest
 cd /tmp/scorchlatest</pre><p>Then</p>
 <pre>
-wget http://www.autoscorch.com/downloads/install
+wget https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/install
 chmod a+x install
 ./install
 </pre><table border="1" cellpadding="1" cellspacing="1" style="width:500px"><thead><tr><th scope="col">NOTE</th>
@@ -128,7 +128,7 @@ chmod a+x install
    7 :               .  hostname
    8 :           fn_PIDWait</pre><p> </p>
 <pre>
-curl -o /tmp/scorch.tar autoscorch.com/downloads/escorch.2.9.2.tar</pre><pre>
+curl -o /tmp/scorch.tar https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/escorch.2.9.14.tar</pre><pre>
  </pre><h1>3.<a id="3" name="3"></a> Centos Docker</h1>
 <p>Using the official centos build from dockerhub <a href="https://hub/docker.com/_/centos">https://hub/docker.com/_/centos</a></p>
 <pre>
@@ -138,7 +138,7 @@ yum install which
 </pre><p>The following can then be used in the docker shell or directly into any other bash shell (including Bash for Windows)</p>
 <pre>
 mkdir /tmp/scorch
-curl -o /tmp/scorch/scorch.tar http://autoscorch.com/downloads/escorch.2.9.2.tar
+curl -o /tmp/scorch/scorch.tar https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/escorch.2.9.14.tar
 cd /tmp/scorch
 chmod 755 obrar
 tar xf scorch.tar
@@ -147,7 +147,7 @@ export PATH=${PATH}:/tmp/scorch
 obrar -l
 ./scorch -install</pre><h1>4.<a id="4" name="4"></a> Create your own image from the Dockerfile</h1>
 <p>Get yourself a copy of the Dockerfile from:</p>
-<p>   <a href="https://raw.githubusercontent.com/marlof/ScORCH/master/Dockerfile-0.1">https://raw.githubusercontent.com/marlof/ScORCH/master/Dockerfile</a></p>
+<p>   <a href="https://raw.githubusercontent.com/marlof/ScORCH/master/Dockerfile">https://raw.githubusercontent.com/marlof/ScORCH/master/Dockerfile</a></p>
 <p>Create the image file</p>
 <pre>
 docker build --network=host -f Dockerfile-0.1 -t webmarcit/scorch:latest .</pre><p>Confirm the image was created</p>
@@ -171,10 +171,10 @@ docker pull webmarcit/scorch-demo</pre><h1>Release Version / Controlled Install<
 <td style="background-color:rgb(153, 153, 153)"><strong>Last Update</strong></td>
 </tr><tr><td>scorch</td>
 <td>Orchestration Suite</td>
-<td><a href="http://autoscorch.com/downloads/escorch.2.9.8.tar">tar</a></td>
-<td><a href="http://autoscorch.com/downloads/escorch.2.9.8.tar.md5.txt" target="_self">md5</a></td>
-<td>E2.9.8</td>
-<td>25/07/2020</td>
+<td><a href="http://autoscorch.com/downloads/escorch.2.9.14.tar">tar</a></td>
+<td><a href="http://autoscorch.com/downloads/escorch.2.9.14.tar.md5.txt" target="_self">md5</a></td>
+<td>E2.9.14</td>
+<td>18/03/2021</td>
 </tr><tr><td>scorchdb</td>
 <td>Lightweight CMDB</td>
 <td>included</td>
@@ -183,7 +183,7 @@ docker pull webmarcit/scorch-demo</pre><h1>Release Version / Controlled Install<
 <td> </td>
 </tr><tr><td><s>obrar</s></td>
 <td><s>Deployment framework</s> (now included in the suite)</td>
-<td><s><a href="http://autoscorch.com/downloads/obrar.1.1">shellscript</a></s></td>
+<td><s><a href="https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/obrar.1.1">shellscript</a></s></td>
 <td> </td>
 <td><s>E1.1</s></td>
 <td><s>19 May 2018</s></td>
