@@ -111,12 +111,13 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 <p>INSTALL_DIR=/tmp/scorch<br />
 VERSION=2.9.7</p>
 <p>The following can then be used in a Unix or Linux docker shell or directly into any other bash shell (including Bash for Windows)</p>
-<p>mkdir ${INSTALL_DIR}<br />
-curl -o ${INSTALL_DIR}/scorch.tar http://autoscorch.com/downloads/escorch.${VERSION}.tar<br />
-cd ${INSTALL_DIR}<br />
-tar xf scorch.tar<br />
-export PATH=${PATH}:${INSTALL_DIR}<br />
-./scorch -install</p>
+<pre>mkdir ${INSTALL_DIR}
+curl -o ${INSTALL_DIR}/scorch.tar http://autoscorch.com/downloads/escorch.${VERSION}.tar
+cd ${INSTALL_DIR}
+tar xf scorch.tar
+export PATH=${PATH}:${INSTALL_DIR}
+./scorch -install
+</pre>
 <p>Obrar installation</p>
 <p>`obrar` is now included with `scorch`<br />
  </p>
@@ -124,46 +125,61 @@ export PATH=${PATH}:${INSTALL_DIR}<br />
 <p>Decide on a scorch base directory, system owner account and group account.</p>
 <p>Have your friendly system administrators create the account, group and directory as well as assigning users to the group. In the example below user scorch, group scorch and directory /opt/scorch have been chosen.</p>
 <p>A simple way to create the users is shown below and as the directory structure for scorch handles its own logs, the directory has been given its own file system. Your organisation my have other requirements or products to setup the accounts. There may be other considerations in your organisation. If in doubt consult your Linux Support team:</p>
-<p>$ dir_Base=/opt/scorch # Example base directory<br />
-$ adduser -U -m -d ${dir_Base} scorch # scorch framework owner</p>
+<pre>
+$ dir_Base=/opt/scorch # Example base directory
+$ adduser -U -m -d ${dir_Base} scorch # scorch framework owner
+</pre>
 <p>str_Group</p>
 <p>There is a new group feature (available from 1.54) to overcome a requirement for all users to be in the same primary group. If you wish to use ScOrch for collaboration work, chose a group by un-commenting out the export str_Group line in the main scorch program</p>
-<p>vi scorch</p>
+<pre>
+vi scorch
+</pre>
 <p>Then    /str_Group=     and un-comment for group directory and file creation export str_Group=scorch</p>
 <p> </p>
 <p>Adding a new user to the group</p>
 <p>If you wish to create new users use useradd. In this example we are adding the user bob: $ useradd -g scorch bob # User is a member of scorch only</p>
 <p>Modifying a current user to be part of the group.</p>
 <p>If you already have users you wish to make part of the group, use the usermod command. In this example we are adding user marc to the scorch group.</p>
-<p>$ usermod -g scorch marc # Add scorch group to user​</p>
+<pre>
+$ usermod -g scorch marc # Add scorch group to user
+</pre>
 <p>The above will create the base directory automatically, but this could also be made manually and need to be changed to allow the scorch group to access files.</p>
-<p>$ chmod 750 ${dir_Base} # Allow group read/execute</p>
+<pre>
+$ chmod 750 ${dir_Base} # Allow group read/execute
+</pre>
 <p>Log in as the chosen system user, in this scenario the chosen system account is deploy. Extract the tar file into the chosen directory into this directory and execute it for the first time as the system user.</p>
-<p>$ sudo -iu scorch<br />
-$ dir_Base=/opt/scorch<br />
-$ cd ${dir_Base}<br />
-$ wget http://www.autoscorch.com/downloads/install<br />
-$ chmod u+x install<br />
-$ ./install</p>
+<pre>
+$ sudo -iu scorch
+$ dir_Base=/opt/scorch
+$ cd ${dir_Base}
+$ wget http://www.autoscorch.com/downloads/install
+$ chmod u+x install
+$ ./install
+</pre>
 <p> </p>
 <p>AC Version</p>
-<p># As root<br />
-dir_Base=/scorch<br />
-groupadd deployr<br />
-adduser -m -d ${dir_Base} deploy -G deployr<br />
-id deploy</p>
-<p># uid=deploy gid=deploy groups=deploy,deployr<br />
-adduser -m deployr -g deployr</p>
-<p># As scorch owner<br />
-sudo su - deploy<br />
-dir_Base=/scorch<br />
-cd ${dir_Base}<br />
-wget http://www.autoscorch.com/downloads/install<br />
-chmod 740 install<br />
-./install<br />
-    # Enter y to set the deployr group<br />
-rm ./install</p>
-<p>./scorch -install</p>
+<pre>
+# As root
+dir_Base=/scorch
+groupadd deployr
+adduser -m -d ${dir_Base} deploy -G deployr
+id deploy
+
+# uid=deploy gid=deploy groups=deploy,deployr
+adduser -m deployr -g deployr
+
+# As scorch owner
+sudo su - deploy
+dir_Base=/scorch
+cd ${dir_Base}
+wget http://www.autoscorch.com/downloads/install
+chmod 740 install
+./install
+    # Enter y to set the deployr group
+rm ./install
+
+./scorch -install
+</pre>
 </div></div></div>  </div>
 
       <footer>
