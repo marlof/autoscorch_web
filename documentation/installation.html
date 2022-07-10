@@ -109,10 +109,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":
 <p>Bash version 4 minimum is assumed.</p>
 <p>Select an installation directory and version</p>
 <p>INSTALL_DIR=/tmp/scorch<br />
-VERSION=2.9.7</p>
+VERSION=2.13.3</p>
 <p>The following can then be used in a Unix or Linux docker shell or directly into any other bash shell (including Bash for Windows)</p>
 <pre>mkdir ${INSTALL_DIR}
-curl -o ${INSTALL_DIR}/scorch.tar http://autoscorch.com/downloads/escorch.${VERSION}.tar
+curl -o ${INSTALL_DIR}/scorch.tar https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/escorch.${VERSION}.tar
 cd ${INSTALL_DIR}
 tar xf scorch.tar
 export PATH=${PATH}:${INSTALL_DIR}
@@ -154,7 +154,7 @@ $ chmod 750 ${dir_Base} # Allow group read/execute
 $ sudo -iu scorch
 $ dir_Base=/opt/scorch
 $ cd ${dir_Base}
-$ wget http://www.autoscorch.com/downloads/install
+$ wget https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/install
 $ chmod u+x install
 $ ./install
 </pre>
@@ -174,7 +174,7 @@ adduser -m deployr -g deployr
 sudo su - deploy
 dir_Base=/scorch
 cd ${dir_Base}
-wget http://www.autoscorch.com/downloads/install
+wget https://s3.eu-west-2.amazonaws.com/autoscorchdownload.com/install
 chmod 740 install
 ./install
     # Enter y to set the deployr group
