@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ScORCH Case Study: From ANT to ScORCH</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #000;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      overflow-x: auto;
+    }
+    .quote {
+      font-style: italic;
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 3px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📘 Case Study: From ANT to ScORCH</h2>
+<h2>Simplifying Automation for Tax Infrastructure</h2>
+
+<h2>🏢 Organization</h2>
+<pre>
+A technology partner supporting the Portuguese Tax Office,
+responsible for maintaining and deploying critical systems
+in a regulated, high-stakes environment.
+</pre>
+
+<h2>⚠️ The Challenge</h2>
+<pre>
+- Legacy ANT scripts powering build and deployment pipelines had become:
+  • Verbose and difficult to maintain
+  • Opaque to testers and non-developer stakeholders
+  • Fragile under change, with poor auditability
+
+- Operational teams struggled to understand or safely modify automation logic.
+- Onboarding new contributors required deep XML knowledge and tribal context.
+</pre>
+
+<h2>🔄 The Migration</h2>
+<pre>
+- ScORCH was introduced as a lightweight, declarative alternative.
+- Initial training focused on:
+  • Plugin structure (SP_<SYSTEM>-<ACTION>())
+  • Core verbs (Task, Manual, Message, Sleep)
+  • Parameterization via GetVar
+
+- ANT scripts were incrementally replaced with ScORCH plugins,
+  each representing a discrete job or deployment step.
+</pre>
+
+<h2>✅ The Outcome</h2>
+<pre>
+- Clarity: ScORCH’s syntax was immediately understandable—even to testers.
+- Modularity: Plugins could be reused, extended, and versioned independently.
+- Auditability: Each job step was logged and traceable, supporting compliance.
+- Empowerment: Teams could author and evolve automation without deep XML expertise.
+</pre>
+
+<h2>💬 Quote from the Field</h2>
+<div class="quote">
+“Its brilliance is in its simplicity.”<br>
+— Tester trained on ScORCH during the migration
+</div>
+
+<h2>🔧 Example Migration</h2>
+<h3>Before (ANT fragment):</h3>
+<pre>
+&lt;target name="deploy"&gt;
+  &lt;exec executable="scp"&gt;
+    &lt;arg value="${build.artifact}" /&gt;
+    &lt;arg value="user@host:/opt/app/" /&gt;
+  &lt;/exec&gt;
+&lt;/target&gt;
+</pre>
+
+<h3>After (ScORCH plugin):</h3>
+<pre>
+SP_DEPLOY-ARTIFACT() {
+  GetVar -pattern "Artifact" -name file_Artifact -default "/opt/app/build.jar"
+  Task "scp ${file_Artifact} user@host:/opt/app/"
+}
+</pre>
+
+<h2>📈 Lessons Learned</h2>
+<pre>
+- ScORCH is not just a tool—it’s a language for automation.
+- Declarative plugins reduce onboarding time and increase operational confidence.
+- Even in regulated environments, simplicity can be a strategic advantage.
+</pre>
+
+</body>
+</html>
