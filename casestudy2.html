@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ScORCH Case Study: Financial Operations</title>
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #000;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      overflow-x: auto;
+    }
+    .quote {
+      font-style: italic;
+      margin: 20px 0;
+      padding-left: 20px;
+      border-left: 3px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📘 Case Study: ScORCH in High-Volume Financial Operations</h2>
+<h2>Empowering Testers and Streamlining Deployments</h2>
+
+<h2>🏢 Organization Context</h2>
+<pre>
+A global payment processor handling millions of transactions daily
+across retail, e-commerce, and banking sectors. The organization
+required automation tooling that could scale across environments
+while remaining accessible to testers, operations staff, and developers.
+</pre>
+
+<h2>⚠️ The Challenge</h2>
+<pre>
+- Existing deployment and operational scripts were fragmented across shell,
+  Python, and legacy tools.
+
+- Testers lacked the ability to safely trigger or inspect automation flows.
+
+- Operational teams needed a way to standardize deployments across environments
+  without deep scripting knowledge.
+
+- Developers wanted a reusable, auditable framework that could evolve with
+  infrastructure changes.
+</pre>
+
+<h2>🔄 The ScORCH Solution</h2>
+<pre>
+- ScORCH was introduced as a lightweight orchestration layer with
+  human-readable semantics.
+
+- Initial rollout focused on training testers to write and execute plugins using:
+  • Declarative verbs (Task, Manual, Message)
+  • Parameter injection via GetVar
+  • Structured naming and documentation blocks
+
+- Plugins were created for:
+  • Environment validation
+  • Deployment triggers
+  • Manual checkpoints for compliance
+  • Post-deployment cleanup and verification
+</pre>
+
+<h2>✅ The Outcome</h2>
+<pre>
+- Empowerment: Testers began writing plugins independently, reducing reliance
+  on developers.
+
+- Standardization: Deployments across environments followed consistent plugin
+  patterns.
+
+- Auditability: Each job step was logged and traceable, supporting internal
+  compliance reviews.
+
+- Extensibility: Teams extended ScORCH to cover operational flows, including
+  rollback and monitoring.
+</pre>
+
+<h2>💬 Quote from the Field</h2>
+<div class="quote">
+“Its brilliance is in its simplicity.”<br>
+— Automation tester trained on ScORCH
+</div>
+
+<h2>🔧 Example Plugin: Deployment Trigger</h2>
+<pre>
+SP_DEPLOY-WEBAPP() {
+  GetVar -pattern "Environment" -name str_Env -default "staging"
+  GetVar -pattern "Version" -name str_Version -default "latest"
+
+  Message "Starting deployment of version ${str_Version} to ${str_Env}"
+  Task "deploy_tool --env ${str_Env} --version ${str_Version}"
+  Manual "Verify deployment status in dashboard before proceeding"
+  Task "echo Deployment complete for ${str_Env}"
+}
+</pre>
+
+<h2>📈 Lessons Learned</h2>
+<pre>
+- ScORCH bridges the gap between scripting and orchestration.
+
+- Declarative plugins enable cross-functional collaboration.
+
+- Simplicity scales—especially in regulated, high-volume environments.
+</pre>
+
+</body>
+</html>
